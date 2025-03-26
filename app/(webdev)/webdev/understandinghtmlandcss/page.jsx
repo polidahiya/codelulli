@@ -7,17 +7,17 @@ import Csspropertiesexample from "./Csspropertiesexample";
 function Page() {
   return (
     <div className="text">
-      <h1>Let's Understand HTML and CSS</h1>
+      <h1>Let{"'"}s Understand HTML and CSS</h1>
       <p>
         In web development, every element on a webpage is essentially a box,
-        thanks to the CSS Box Model. Whether it's text, images, buttons, or
+        thanks to the CSS Box Model. Whether it{"'"}s text, images, buttons, or
         entire sections, each element is enclosed in an invisible rectangular
         box that defines its size, spacing, and position.
       </p>
       <p>
         Visit your favorite website and press <Keybutton text={"Ctrl"} /> +{" "}
         <Keybutton text={"Shift"} /> + <Keybutton text={"C"} />. Then, move your
-        mouse around the webpage. You'll see the box model in action.
+        mouse around the webpage. You{"'"}ll see the box model in action.
       </p>
       <strong>See? Everything is a box—pretty interesting, right?</strong>
       <h2 className="mt-5">So, How Do We Create These Boxes?</h2>
