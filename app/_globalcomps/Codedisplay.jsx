@@ -6,11 +6,14 @@ import {
 
 function Codedisplay({ code, language = "javascript", isDarkMode = true }) {
   return (
-    <div className="relative">
-      <div className="absolute top-0 right-0 p-2">
-        <button className="px-5 py-1 rounded-md text-white border border-white text-xs">
-          Copy
-        </button>
+    <div className="relative bg-[#1e1e1e] rounded-md overflow-hidden">
+      <div className="bg-[#313131] flex justify-between p-2">
+        <span className="text-gray-300 ml-3">{language}</span>
+        <div>
+          <button className="px-5 py-1 rounded-md text-white border border-white text-xs">
+            Copy
+          </button>
+        </div>
       </div>
       <Prism
         language={language}

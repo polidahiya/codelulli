@@ -3,7 +3,7 @@ import Navbar from "./_globalcomps/navbar/Navbar";
 import { webroutes } from "./webdata";
 import Link from "next/link";
 
-async function layout({children}) {
+async function layout({ children }) {
   return (
     <>
       <Navbar />
@@ -19,7 +19,7 @@ async function layout({children}) {
             </Link>
           ))}
         </div>
-        <div className="flex-1"> {children}</div>
+        <div className="w-full md:w-[calc(100%-520px)] pt-5"> {children}</div>
         <div className="min-w-60  bg-bg1"></div>
       </div>
     </>

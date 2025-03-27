@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import Codedisplay from "@/app/_globalcomps/Codedisplay";
+import { Button, ControlGroup } from "@/app/_globalcomps/Buttonandbuttongroup";
 
-function Csspropertiesexample() {
+function CssPropertiesExample() {
   const text = "This is a test text";
   const colors = [
     "red",
@@ -18,7 +19,7 @@ function Csspropertiesexample() {
   ];
   const lengths = ["100px", "200px", "300px", "400px", "500px"];
 
-  const [selectedoptions, setselectedoptions] = useState({
+  const [selectedOptions, setSelectedOptions] = useState({
     color: "red",
     background: "green",
     height: "200px",
@@ -26,8 +27,9 @@ function Csspropertiesexample() {
   });
 
   return (
-    <div>
+    <div className="p-6">
       <div className="flex flex-col md:flex-row gap-5">
+        {/* Code Display */}
         <div className="flex-1">
           <Codedisplay
             language="html"
@@ -39,107 +41,98 @@ function Csspropertiesexample() {
     <title>Css properties</title>
     <style>
         div {
-            ${selectedoptions?.color && `color: ${selectedoptions?.color};`}
+            ${selectedOptions?.color && `color: ${selectedOptions?.color};`}
             ${
-              selectedoptions?.background &&
-              `background: ${selectedoptions?.background};`
+              selectedOptions?.background &&
+              `background: ${selectedOptions?.background};`
             }
-            ${selectedoptions?.height && `height: ${selectedoptions?.height};`}
-            ${selectedoptions?.width && `width: ${selectedoptions?.width};`}
-            /* ...more properties here */
+            ${selectedOptions?.height && `height: ${selectedOptions?.height};`}
+            ${selectedOptions?.width && `width: ${selectedOptions?.width};`}
         }
     </style>
 </head>
 <body>
     <div>${text}</div>
-    </body>
-    </html>`}
+</body>
+</html>`}
           />
         </div>
+
+        {/* Output */}
         <div className="flex-1">
-          <p className="text-center">Output</p>
-          <div className="border min-h-64 overflow-scroll">
+          <p className="text-center text-lg font-semibold">Output</p>
+          <div className="border min-h-64 p-4 flex justify-center items-center">
             <div
               style={{
-                color: selectedoptions?.color,
-                backgroundColor: selectedoptions?.background,
-                height: selectedoptions?.height,
-                width: selectedoptions?.width,
+                color: selectedOptions?.color,
+                backgroundColor: selectedOptions?.background,
+                height: selectedOptions?.height,
+                width: selectedOptions?.width,
               }}
-              className="duration-300"
+              className="flex items-center justify-center border rounded-md duration-300"
             >
               {text}
             </div>
           </div>
         </div>
       </div>
-      {/* options */}
-      <div>
-        {/* colors */}
-        <div className="flex flex-wrap gap-2 items-center mt-2">
-          <span>Color : </span>
-          {colors.map((item, i) => (
-            <button
-              className="border px-5 py-1 rounded-md"
-              key={i}
-              style={{ color: item }}
+
+      {/* Controls */}
+      <div className="mt-6 space-y-4">
+        <ControlGroup title="Color">
+          {colors.map((color) => (
+            <Button
+              key={color}
+              style={{ color }}
+              onClick={() => setSelectedOptions((prev) => ({ ...prev, color }))}
+            >
+              {color}
+            </Button>
+          ))}
+        </ControlGroup>
+
+        <ControlGroup title="Background">
+          {colors.map((color) => (
+            <Button
+              key={color}
+              style={{ color }}
               onClick={() =>
-                setselectedoptions((pre) => ({ ...pre, color: item }))
+                setSelectedOptions((prev) => ({ ...prev, background: color }))
               }
             >
-              {item}
-            </button>
+              {color}
+            </Button>
           ))}
-        </div>
-        {/* background */}
-        <div className="flex flex-wrap gap-2 items-center mt-2">
-          <span>Background : </span>
-          {colors.map((item, i) => (
-            <button
-              className="border px-5 py-1 rounded-md"
-              key={i}
-              style={{ color: item }}
+        </ControlGroup>
+
+        <ControlGroup title="Height">
+          {lengths.map((size) => (
+            <Button
+              key={size}
               onClick={() =>
-                setselectedoptions((pre) => ({ ...pre, background: item }))
+                setSelectedOptions((prev) => ({ ...prev, height: size }))
               }
             >
-              {item}
-            </button>
+              {size}
+            </Button>
           ))}
-        </div>
-        {/* height */}
-        <div className="flex flex-wrap gap-2 items-center mt-2">
-          <span>Height : </span>
-          {lengths.map((item, i) => (
-            <button
-              className="border px-5 py-1 rounded-md"
-              key={i}
+        </ControlGroup>
+
+        <ControlGroup title="Width">
+          {lengths.map((size) => (
+            <Button
+              key={size}
               onClick={() =>
-                setselectedoptions((pre) => ({ ...pre, height: item }))
+                setSelectedOptions((prev) => ({ ...prev, width: size }))
               }
             >
-              {item}
-            </button>
+              {size}
+            </Button>
           ))}
-        </div>
-        {/* width */}
-        <div className="flex flex-wrap gap-2 items-center mt-2">
-          <span>Width : </span>
-          {lengths.map((item, i) => (
-            <button
-              className="border px-5 py-1 rounded-md"
-              key={i}
-              onClick={() =>
-                setselectedoptions((pre) => ({ ...pre, width: item }))
-              }
-            >
-              {item}
-            </button>
-          ))}
-        </div>
+        </ControlGroup>
       </div>
     </div>
   );
 }
 
-export default Csspropertiesexample;
+export default CssPropertiesExample;
