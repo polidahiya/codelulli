@@ -4,5 +4,7 @@ export const webroutes = [
   "/webdev/marginpaddingborders",
   "/webdev/addimages",
   "/webdev/flexbox",
+  "/webdev/shortcutsandextensions",
+  "/webdev/github",
   "/webdev",
 ];
