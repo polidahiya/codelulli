@@ -203,7 +203,7 @@ function page() {
       </p>
       <ul>
         <li>Install the Live Server extension.</li>
-        <li>Open an HTML file and click "Go Live" at the bottom of VS Code.</li>
+        <li>Open an HTML file and click {'"'}Go Live{'"'} at the bottom of VS Code.</li>
         <li>
           Your file will open in a browser and automatically refresh when
           changes are made.
@@ -226,7 +226,7 @@ function page() {
       <ul>
         <li>Install Live Preview from the Extensions Marketplace.</li>
         <li>
-          Open an HTML file and click "Live Preview" from the editor toolbar.
+          Open an HTML file and click {'"'}Live Preview{'"'} from the editor toolbar.
         </li>
       </ul>
 
@@ -255,9 +255,9 @@ function page() {
               </strong>
               ).
             </li>
-            <li>Search for "Format on Save" and enable it.</li>
+            <li>Search for {'"'}Format on Save{'"'} and enable it.</li>
             <li>
-              Right-click a file, select "Format Document," and choose Prettier.
+              Right-click a file, select {'"'}Format Document,{'"'} and choose Prettier.
             </li>
           </ul>
         </li>

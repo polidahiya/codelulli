@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function page() {
   return (
@@ -32,13 +33,16 @@ function page() {
           className="w-full"
         ></Image>
         <li>
-          <strong>Install Git (Optional but recommended):</strong>
+          <strong>
+            Install Git {"("}Optional but recommended{")"} {"("}Not for
+            beginners{")"}:
+          </strong>
         </li>
         <p>
           Download and install Git from{" "}
           <a href="https://git-scm.com/">git-scm.com</a>. Set up your Git
-          username and email: git config --global user.name "Your Name" git
-          config --global user.email "youremail@example.com"
+          username and email: git config --global user.name {'"'}Your Name{'"'}{" "}
+          git config --global user.email {'"'}youremail@example.com{'"'}
         </p>
       </ul>
 
@@ -47,7 +51,9 @@ function page() {
         <li>
           Go to <a href="https://github.com/">GitHub</a> and log in.
         </li>
-        <li>Click the “+” icon (top right) → “New repository”.</li>
+        <li>
+          Click the {'"'}+{'"'} icon (top right) → {'"'}New repository{'"'}.
+        </li>
         <div className="flex items-start gap-2">
           <Image
             src={"/webdev/githubnewbutton.jpg"}
@@ -107,20 +113,61 @@ function page() {
         <li>
           Go to <strong>Settings</strong> of your repository.
         </li>
+        <Image
+          src={"/webdev/githubsettingbutton.jpg"}
+          alt="Github-setting-button"
+          height={44}
+          width={720}
+          loading="lazy"
+          className="w-full"
+          quality={100}
+        ></Image>
         <li>
           Navigate to the <strong>Pages</strong> section.
         </li>
+        <Image
+          src={"/webdev/githubpagesbutton.jpg"}
+          alt="Github-pages-button"
+          height={315}
+          width={288}
+          loading="lazy"
+          className="w-full md:w-72"
+          quality={100}
+        ></Image>
         <li>
           Under <strong>Branch</strong>, select <code>main</code> (or{" "}
           <code>master</code>) and click <strong>Save</strong>.
         </li>
-        <li>Your site will be live at:</li>
+        <Image
+          src={"/webdev/githubpagessavebutton.jpg"}
+          alt="Github-pages-save-button"
+          height={318}
+          width={720}
+          loading="lazy"
+          className="w-full"
+          quality={100}
+        ></Image>
+        <li>Wait a few minutes, refresh and your site will be live at:</li>
         <p>
           <code>https://yourusername.github.io/repository-name/</code>
         </p>
       </ol>
 
       <p>Now, your website is hosted for free using GitHub Pages! 🚀</p>
+      <p>
+        Share the link of your website with your friends, here is the link of
+        one of my fun project,{" "}
+        <Link
+          href="https://space-shooting.vercel.app/"
+          target="_blank"
+          rel="noopener"
+          prefetch={false}
+        >
+          Visit
+        </Link>
+        .
+      </p>
+      <p>Try not to loose😉.</p>
     </div>
   );
 }

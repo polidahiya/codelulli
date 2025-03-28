@@ -22,7 +22,7 @@ function Page() {
         <div className="flex-1 bg-green-600 h-48">Box 2</div>
       </div>
       <p>
-        Let's say you have two boxes, <mark>Box 1</mark> and <mark>Box 2</mark>, 
+        Let{"'"}s say you have two boxes, <mark>Box 1</mark> and <mark>Box 2</mark>, 
         and you want them to appear side by side.
       </p>
       <p>
