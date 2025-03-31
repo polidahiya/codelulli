@@ -6,7 +6,7 @@ function Page() {
   return (
     <div className="text">
       <h1>Hover Effect and Animations</h1>
-      <p>Let's create something interactive.</p>
+      <p>Let{"'"}s create something interactive.</p>
 
       <h2>Hover Effect</h2>
       <p>
@@ -41,7 +41,7 @@ function Page() {
 
       <h3>How to do all these?</h3>
       <br />
-      <li>Let's create a box first:</li>
+      <li>Let{"'"}s create a box first:</li>
       <Codewithoutput
         language="html"
         code={`<style>
