@@ -6,5 +6,6 @@ export const webroutes = [
   "/webdev/flexbox",
   "/webdev/shortcutsandextensions",
   "/webdev/github",
-  "/webdev",
+  "/webdev/hoverandanimations",
+  "/webdev/positions",
 ];

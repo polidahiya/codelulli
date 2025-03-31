@@ -6,7 +6,7 @@ import {
 
 function Codedisplay({ code, language = "javascript", isDarkMode = true }) {
   return (
-    <div className="relative bg-[#1e1e1e] rounded-md overflow-hidden">
+    <div className="relative bg-[#1e1e1e] rounded-md overflow-hidden flex-1">
       <div className="bg-[#313131] flex justify-between p-2">
         <span className="text-gray-300 ml-3">{language}</span>
         <div>

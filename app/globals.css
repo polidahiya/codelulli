@@ -163,3 +163,14 @@ body {
     font-size: 0.95rem;
   }
 }
+
+.boxtest {
+  transition: background-color 1s, color 1s 1s;
+  color: #16a34a;
+  background-color: #dc2626;
+}
+.boxtest:hover { /* Removed the space before :hover */
+  color: #9e2102;
+  background-color: #006eff;
+}
+
