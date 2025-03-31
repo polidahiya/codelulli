@@ -1,5 +1,4 @@
 import React from "react";
-import Codedisplay from "@/app/_globalcomps/Codedisplay";
 import Codewithoutput from "@/app/_globalcomps/Codewithoutput";
 
 function Page() {
