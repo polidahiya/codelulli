@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --primary: #007bff;
+  --primary: #4f46e5;
   --secondary: #1e293b;
   --background: #f8f9fa;
   --text: #525252;
@@ -15,7 +15,6 @@
 }
 
 [data-theme="dark"] {
-  --primary: #0a192f;
   --secondary: #121212;
   --background: #1a1a1a;
   --text: #f8f9fa;
@@ -94,7 +93,7 @@ body {
 
 /* Links */
 .text a {
-  color: #007bff;
+  color: var(--primary);
   text-decoration: underline;
   transition: color 0.3s ease;
 }
@@ -119,7 +118,7 @@ body {
 
 /* Blockquotes */
 .text blockquote {
-  border-left: 4px solid #007bff;
+  border-left: 4px solid var(--primary);
   padding-left: 1rem;
   margin: 1rem 0;
   font-style: italic;
@@ -169,8 +168,8 @@ body {
   color: #16a34a;
   background-color: #dc2626;
 }
-.boxtest:hover { /* Removed the space before :hover */
+.boxtest:hover {
+  /* Removed the space before :hover */
   color: #9e2102;
   background-color: #006eff;
 }
-
