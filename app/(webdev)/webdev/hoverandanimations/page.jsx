@@ -131,6 +131,32 @@ function Page() {
           <div className="text-white bg-red-500 w-24 h-24 hover:w-72 duration-[3s]"></div>
         </div>
       </Codewithoutput>
+      <br />
+      <li>
+        Add delay in the hover effect by using the <code>transition-delay</code>{" "}
+        property:
+      </li>
+      <Codewithoutput
+        language="html"
+        code={`<style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      color: white;
+      transition: 2s;
+      transition-delay: 1s;
+    }
+    .box:hover {
+      width: 200px;
+    }
+</style>
+<div class="box"></div>`}
+      >
+        <div className="flex items-center justify-center flex-1">
+          <div className="text-white bg-red-500 w-24 h-24 hover:w-72 duration-[2s] delay-1000"></div>
+        </div>
+      </Codewithoutput>
     </div>
   );
 }
