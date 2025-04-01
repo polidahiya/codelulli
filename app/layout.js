@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         {/* search console verification */}
         <meta
           name="google-site-verification"
-          content="GLY2qwoqDD8WC_7qvDCrJy3noWnu0Vs8-qw2y9vlQNM"
+          content="Rvp7Y-_9q60aAlayucwyJhaYlYv0aTw-UOWMbTqa4Xs"
         />
       </head>
       <body className={`antialiased`}>{children}</body>
