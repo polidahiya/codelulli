@@ -1,5 +1,6 @@
 import Copybutton from "./Copybutton";
 import Searchbar from "./Searchbar";
+import Gridview from "./Gridview";
 
 function page() {
   const charsets = {
@@ -47,38 +48,7 @@ function page() {
         numeric_code: "&#35;",
       },
     ],
-    whitespace: [
-      {
-        character: " ",
-        description: "Non-breaking space",
-        html_entity: "&nbsp;",
-        numeric_code: "&#160;",
-      },
-      {
-        character: " ",
-        description: "En space",
-        html_entity: "&ensp;",
-        numeric_code: "&#8194;",
-      },
-      {
-        character: " ",
-        description: "Em space",
-        html_entity: "&emsp;",
-        numeric_code: "&#8195;",
-      },
-      {
-        character: " ",
-        description: "Thin space",
-        html_entity: "&thinsp;",
-        numeric_code: "&#8201;",
-      },
-      {
-        character: " ",
-        description: "Zero-width space",
-        html_entity: "&#8203;",
-        numeric_code: "&#8203;",
-      },
-    ],
+
     punctuation_and_symbols: [
       {
         character: "©",
@@ -539,6 +509,38 @@ function page() {
         description: "Airplane",
         html_entity: "&#9992;",
         numeric_code: "&#9992;",
+      },
+    ],
+    whitespace: [
+      {
+        character: " ",
+        description: "Non-breaking space",
+        html_entity: "&nbsp;",
+        numeric_code: "&#160;",
+      },
+      {
+        character: " ",
+        description: "En space",
+        html_entity: "&ensp;",
+        numeric_code: "&#8194;",
+      },
+      {
+        character: " ",
+        description: "Em space",
+        html_entity: "&emsp;",
+        numeric_code: "&#8195;",
+      },
+      {
+        character: " ",
+        description: "Thin space",
+        html_entity: "&thinsp;",
+        numeric_code: "&#8201;",
+      },
+      {
+        character: " ",
+        description: "Zero-width space",
+        html_entity: "&#8203;",
+        numeric_code: "&#8203;",
       },
     ],
     smileys_and_emotions: [
@@ -1036,6 +1038,7 @@ function page() {
   return (
     <div className="">
       <Searchbar charsets={charsets} />
+      <Gridview charsets={charsets}/>
       {Object.entries(charsets).map(([category, chars]) => (
         <div key={category} className="my-6">
           <h3 className="text-lg font-semibold capitalize mb-2 px-2">
@@ -1044,7 +1047,7 @@ function page() {
           <div className="overflow-x-auto">
             <table className="w-full border border-gray-300">
               <thead>
-                <tr className="bg-gray-100">
+                <tr className="bg-gray-100 dark:bg-gray-700 dark:text-white">
                   <th className="border p-2">Character</th>
                   <th className="border p-2">Description</th>
                   <th className="border p-2">HTML Entity</th>
@@ -1073,7 +1076,7 @@ function page() {
         <h2>About This Page</h2>
         <p>
           This page offers a comprehensive collection of special characters,
-          symbols, and emojis, categorized for easy navigation. You'll find
+          symbols, and emojis, categorized for easy navigation. You{"'"}ll find
           sections covering basic characters, punctuation, mathematical symbols,
           currency symbols, arrows, Greek letters, and various emoji sets. Each
           entry includes the character, a brief description, its HTML entity (if
@@ -1114,10 +1117,10 @@ function page() {
         </ul>
 
         <p>
-          Whether you're building a website, writing documentation, or designing
-          a user interface, these special characters can enhance readability,
-          functionality, and visual appeal. Explore the collection and find the
-          perfect symbol for your needs!
+          Whether you{"'"}re building a website, writing documentation, or
+          designing a user interface, these special characters can enhance
+          readability, functionality, and visual appeal. Explore the collection
+          and find the perfect symbol for your needs!
         </p>
       </div>
     </div>
