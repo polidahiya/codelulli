@@ -5,7 +5,7 @@ import Footer from "./(frontend)/_globalcomps/footer/Footer";
 
 const page = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen">
       <Navbar />
       {/* Hero Section */}
       <div className="bg-primary text-white">
@@ -20,7 +20,7 @@ const page = () => {
             </p>
             <div className="mt-8">
               <Link
-                href="/webdev/firstwebpage"
+                href="/webdev/Tutorials/firstwebpage"
                 className="inline-block bg-white text-primary px-8 py-3 rounded-md text-lg font-semibold hover:bg-gray-100"
               >
                 Start Learning Now

@@ -7,10 +7,10 @@ async function layout({ children }) {
   return (
     <>
       <Navbar />
-      <div className="px-5 md:px-0 flex gap-5">
+      <div className="px-5 md:px-0 flex lg:gap-5">
         <Leftsidemenu />
         <div className="w-full md:w-[calc(100%-520px)] pt-5"> {children}</div>
-        <div className="min-w-60  bg-bg1"></div>
+        <div className="min-w-60 bg-bg1 hidden lg:block"></div>
       </div>
       <Footer />
     </>
