@@ -1,6 +1,5 @@
 import "./globals.css";
 import Script from "next/script";
-import Context from "./Context";
 
 export const metadata = {
   title: "Codelulli-Simply Genius!",
@@ -40,9 +39,7 @@ export default function RootLayout({ children }) {
           content="Rvp7Y-_9q60aAlayucwyJhaYlYv0aTw-UOWMbTqa4Xs"
         />
       </head>
-      <body className={`antialiased`}>
-        <Context>{children}</Context>
-      </body>
+      <body className={`antialiased`}>{children}</body>
     </html>
   );
 }
