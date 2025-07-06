@@ -18,7 +18,7 @@ export default async function Page({ params }) {
 
   return (
     <div>
-      <Redirector link={link} />
+      {link && <Redirector link={link} />}
       <div
         dangerouslySetInnerHTML={{ __html: body || "" }}
         className="text p-2 md:p-10"
