@@ -12,3 +12,4 @@ async function page({ searchParams }) {
 }
 
 export default page;
+
