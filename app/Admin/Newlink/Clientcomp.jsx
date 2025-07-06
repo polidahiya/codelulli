@@ -34,8 +34,10 @@ export default function Clientcomp() {
     setloading(true);
 
     const res = await Savelink(data);
-    if (res.status == 200) setdata(initialstates);
-    setmessage(res?.message);
+    if (res.status == 200) {
+      setdata(initialstates);
+      setmessage(`https://codelulli.vercel.app/C/${res?.linknumber}`);
+    }
     setloading(false);
   };
 
@@ -47,28 +49,28 @@ export default function Clientcomp() {
       >
         <Standardinputfield
           titlename="Link"
-          isRequired
+          isRequired={false}
           value={data.link || ""}
           onchange={(e) => handleChange("link", e.target.value)}
           clear={() => handleClearField("link")}
         />
         <Standardinputfield
           titlename="Seo title"
-          isRequired
+          isRequired={false}
           value={data.seotitle || ""}
           onchange={(e) => handleChange("seotitle", e.target.value)}
           clear={() => handleClearField("seotitle")}
         />
         <Standardinputfield
           titlename="Seo description"
-          isRequired
+          isRequired={false}
           value={data.seodescription || ""}
           onchange={(e) => handleChange("seodescription", e.target.value)}
           clear={() => handleClearField("seodescription")}
         />
         <Standardinputfield
           titlename="Seo keywords (Seperate keywords with ,)"
-          isRequired
+          isRequired={false}
           value={data.seokeywords || ""}
           onchange={(e) => handleChange("seokeywords", e.target.value)}
           clear={() => handleClearField("seokeywords")}
@@ -84,7 +86,7 @@ export default function Clientcomp() {
           <div className="flex-1">
             <StandardTextAreaField
               titlename="Body"
-              isRequired
+              isRequired={false}
               value={data.body || ""}
               onchange={(e) => handleChange("body", e.target.value)}
               clear={() => handleClearField("body")}

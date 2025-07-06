@@ -29,7 +29,12 @@ export default async function Savelink(data) {
         ...commondata,
         linknumber: updatedsitedata?.linknumber,
       });
-      return { status: 200, message: "Link saved successfully" };
+
+      return {
+        status: 200,
+        linknumber: updatedsitedata?.linknumber,
+        message: "Link saved successfully",
+      };
     }
   } catch (error) {
     return { status: 500, message: "Something went wrong" };

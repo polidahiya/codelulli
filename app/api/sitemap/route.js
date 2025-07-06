@@ -16,7 +16,7 @@ const generateLinkurls = (allLinks) =>
     loc: `https://codelulli.vercel.app/C/${link?.linknumber}`,
     lastmod: today,
     changefreq: "daily",
-    priority: "1",
+    priority: "0.9",
   }));
 
 export async function GET() {
