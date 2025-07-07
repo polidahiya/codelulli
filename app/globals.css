@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #4f46e5;
+  --secondary: #1e293b;
+  --background: #f8f9fa;
+  --text: #525252;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --error: #dc2626;
+  --bg1: #f3f4f6;
+}
+
+[data-theme="dark"] {
+  --secondary: #121212;
+  --background: #1a1a1a;
+  --text: #f8f9fa;
+  --bg1: #222222;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background);
+}
+
 .test {
   border: 1px solid red;
 }

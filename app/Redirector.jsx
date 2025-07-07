@@ -39,7 +39,6 @@ export default function RedirectPage({ link }) {
 
       <Link
         href={link}
-        replace
         className={`px-6 py-3 rounded-lg text-white font-semibold transition text-sm sm:text-base ${
           linkenabled
             ? "bg-blue-600 hover:bg-blue-700 cursor-pointer inline-block"

@@ -1,22 +1,35 @@
 import "./globals.css";
 import Script from "next/script";
 import Googleanayltics from "./Googleananlytics";
+import { Mulish } from "next/font/google";
+import Navbar from "./_comps/navbar/Navbar";
+import Context from "./Context";
+
+const mulish = Mulish({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"], // choose weights you need
+  style: ["normal", "italic"], // optional
+  display: "swap",
+});
 
 export const metadata = {
-  title: "Codelulli-Simply Genius!",
+  title: "Explore Ideas, Insights & Stories | Your Daily Dose of Blogs",
   description:
-    "Contact Codelulli for expert web development tutorials. Reach out via email or social media for support on mastering React, Tailwind CSS, and more. Start your coding journey today!",
+    "Discover a wide range of blogs covering lifestyle, tech, travel, health, business, and more. Stay informed, inspired, and entertained — one post at a time.",
   keywords: [
-    "web development tutorials",
-    "React tutorials",
-    "Tailwind CSS",
-    "coding for beginners",
-    "Codelulli contact",
-    "learn web development",
-    "programming tutorials",
-    "React JS",
-    "front-end development",
-    "online coding lessons",
+    "blogging website",
+    "latest blog posts",
+    "personal blogs",
+    "lifestyle blogs",
+    "tech blogs",
+    "travel stories",
+    "health tips",
+    "business insights",
+    "content writing",
+    "online articles",
+    "storytelling",
+    "daily blogs",
+    "blog platform",
   ],
 };
 
@@ -48,7 +61,14 @@ export default function RootLayout({ children }) {
           content="GLY2qwoqDD8WC_7qvDCrJy3noWnu0Vs8-qw2y9vlQNM"
         />
       </head>
-      <body className={`antialiased`}>{children}</body>
+      <body
+        className={`${mulish.className} antialiased max-w-[1900px] mx-auto`}
+      >
+        <Context>
+          <Navbar />
+          {children}
+        </Context>
+      </body>
     </html>
   );
 }
