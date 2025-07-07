@@ -1,5 +1,6 @@
 import "./globals.css";
 import Script from "next/script";
+import Googleanayltics from "./Googleananlytics";
 
 export const metadata = {
   title: "Codelulli-Simply Genius!",
@@ -23,6 +24,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        {/* google analytics */}
+        <Googleanayltics />
         {/* google adsense */}
         <Script
           async
@@ -34,9 +37,15 @@ export default function RootLayout({ children }) {
           content="ca-pub-7398670337880164"
         ></meta>
         {/* search console verification */}
+        {/* url */}
         <meta
           name="google-site-verification"
           content="Rvp7Y-_9q60aAlayucwyJhaYlYv0aTw-UOWMbTqa4Xs"
+        />
+        {/* domain */}
+        <meta
+          name="google-site-verification"
+          content="GLY2qwoqDD8WC_7qvDCrJy3noWnu0Vs8-qw2y9vlQNM"
         />
       </head>
       <body className={`antialiased`}>{children}</body>
