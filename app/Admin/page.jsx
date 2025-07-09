@@ -2,6 +2,7 @@ import React from "react";
 import { getcollection } from "../Mongodb";
 import Copybutton from "./Copybutton";
 import Link from "next/link";
+import Linktolink from "./_comps/Linktolink";
 
 export default async function Page({ searchParams }) {
   const { search = "", page = 1 } = await searchParams;
@@ -43,6 +44,21 @@ export default async function Page({ searchParams }) {
           Search
         </button>
       </form>
+      {/* link to link */}
+      <div>
+        <Linktolink />
+      </div>
+      {/* link shortner */}
+      <div className="my-6 ">
+        <Link
+          href="https://goo.su/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-5 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-blue-600 font-medium shadow-sm transition"
+        >
+          🌐 Try goo.su Link Shortener
+        </Link>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
         {data.map((item, i) => {
