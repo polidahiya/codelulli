@@ -1,10 +1,22 @@
 import React from "react";
 import Clientcomp from "./Clientcomp";
+import { getcollection } from "@/app/Mongodb";
 
-function page() {
+async function page({ searchParams }) {
+  const { edit } = await searchParams;
+  const { Linkscollection, ObjectId } = await getcollection();
+
+  const data = edit
+    ? await Linkscollection.findOne({
+        _id: new ObjectId(edit),
+      })
+    : null;
+    
+  if (data) data._id = data._id.toString();
+
   return (
     <div>
-      <Clientcomp />
+      <Clientcomp edit={data} />
     </div>
   );
 }

@@ -26,7 +26,7 @@ function Linktolink() {
           placeholder="Enter a link (e.g. https://google.com)"
           value={inputLink}
           onChange={(e) => setInputLink(e.target.value)}
-          className="w-full md:w-1/2 px-4 py-2 border rounded"
+          className="w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
           required
         />
         <button

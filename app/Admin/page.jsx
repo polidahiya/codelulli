@@ -25,17 +25,18 @@ export default async function Page({ searchParams }) {
   const data = await Linkscollection.find(query)
     .skip((page - 1) * itemsPerPage)
     .limit(itemsPerPage)
+    .sort({ timestamp: -1 })
     .toArray();
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-6 px-4 md:px-10">
-      <form className="mb-4 flex flex-wrap gap-2">
+      <form className="mb-4 flex gap-2">
         <input
           type="text"
           name="search"
           defaultValue={search}
           placeholder="Search SEO title or keyword..."
-          className="w-full md:w-1/2 p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
         <button
           type="submit"
@@ -59,8 +60,16 @@ export default async function Page({ searchParams }) {
           🌐 Try goo.su Link Shortener
         </Link>
       </div>
+      <div className="">
+        <Link
+          href={"/Admin/Newlink"}
+          className="block text-center w-full p-2 text-blue-600 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800  rounded-md shadow-sm"
+        >
+          + Create a blog
+        </Link>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-5">
         {data.map((item, i) => {
           const ourlink = `https://codelulli.vercel.app/C/${item?.linknumber}`;
           return (

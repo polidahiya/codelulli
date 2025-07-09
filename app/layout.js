@@ -4,6 +4,9 @@ import Googleanayltics from "./Googleananlytics";
 import { Mulish } from "next/font/google";
 import Navbar from "./_comps/navbar/Navbar";
 import Context from "./Context";
+import Confirmdialogbox from "./_comps/Confirmationdialogbox";
+import CookieConsent from "./_comps/Cookiesconsent";
+import Footer from "./_comps/Footer";
 
 const mulish = Mulish({
   subsets: ["latin"],
@@ -65,8 +68,11 @@ export default function RootLayout({ children }) {
         className={`${mulish.className} antialiased max-w-[1900px] mx-auto`}
       >
         <Context>
+          <Confirmdialogbox />
+          <CookieConsent />
           <Navbar />
           {children}
+          <Footer />
         </Context>
       </body>
     </html>

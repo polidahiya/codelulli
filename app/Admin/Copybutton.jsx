@@ -5,6 +5,7 @@ import copytoclipboard from "../_comps/helperfuns/Copytoclipiboard";
 function Copybutton({ link }) {
   return (
     <button
+      type="button"
       onClick={() => {
         copytoclipboard(link);
       }}

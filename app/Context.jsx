@@ -5,8 +5,23 @@ const AppContext = createContext({});
 
 export function Context({ children }) {
   const [showleftmenu, setshowleftmenu] = useState(false);
+  const showdialoginitialvalues = {
+    show: false,
+    title: "",
+    continue: null,
+    type: true,
+  };
+  const [showdialog, setshowdialog] = useState(showdialoginitialvalues);
   return (
-    <AppContext.Provider value={{ showleftmenu, setshowleftmenu }}>
+    <AppContext.Provider
+      value={{
+        showleftmenu,
+        setshowleftmenu,
+        showdialoginitialvalues,
+        showdialog,
+        setshowdialog,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

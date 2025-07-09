@@ -2,9 +2,14 @@
 import React, { useState } from "react";
 import Standardinputfield from "../_comps/Standardinputfield";
 import StandardTextAreaField from "../_comps/Standardtextfield";
-import Savelink from "./Savelink";
+import { Savelink, Deletelink } from "./Savelink";
+import Copybutton from "../Copybutton";
+import { AppContextfn } from "@/app/Context";
+import { useRouter } from "next/navigation";
 
-export default function Clientcomp() {
+export default function Clientcomp({ edit }) {
+  const router = useRouter();
+  const { setshowdialog } = AppContextfn();
   const initialstates = {
     link: "",
     seotitle: "",
@@ -13,7 +18,7 @@ export default function Clientcomp() {
     body: "",
   };
 
-  const [data, setdata] = useState(initialstates);
+  const [data, setdata] = useState(edit || initialstates);
   const [loading, setloading] = useState(false);
   const [message, setmessage] = useState("");
 
@@ -93,7 +98,9 @@ export default function Clientcomp() {
             />
           </div>
         </div>
-        <p>{message}</p>
+        <p>
+          {message} <Copybutton link={message} />
+        </p>
         <div className="flex items-center justify-center gap-5">
           <button
             type="submit"
@@ -107,19 +114,36 @@ export default function Clientcomp() {
             {data._id ? "Update" : "Add"}
           </button>
           {data._id && (
-            <button
-              className="flex items-center justify-center gap-2 px-4 py-2  border rounded-md"
-              type="button"
-              onClick={() => {
-                resetState();
-                setdeletedimages([]);
-                setshoweditform(false);
-              }}
-              aria-label="Cancel"
-              title="Cancel"
-            >
-              Cancel
-            </button>
+            <>
+              <button
+                className="flex items-center justify-center gap-2 px-4 py-2  border rounded-md"
+                type="button"
+                onClick={() => window.location.back()}
+                aria-label="Cancel"
+                title="Cancel"
+              >
+                Cancel
+              </button>
+              <button
+                className="flex items-center justify-center gap-2 px-4 py-2  border rounded-md text-white bg-red-600"
+                type="button"
+                onClick={() =>
+                  setshowdialog({
+                    show: true,
+                    type: false,
+                    title: "Are you sure you want to delete this link ?",
+                    continue: async () => {
+                      const res = await Deletelink(data._id);
+                      router.push("/Admin");
+                    },
+                  })
+                }
+                aria-label="Cancel"
+                title="Cancel"
+              >
+                Delete
+              </button>
+            </>
           )}
         </div>
       </form>
