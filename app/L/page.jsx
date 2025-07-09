@@ -1,6 +1,7 @@
 import React from "react";
 import Redirector from "../Redirector";
 import RentBeanAds from "../_comps/ads/Rentbeanads";
+import Link from "next/link";
 
 async function page({ searchParams }) {
   const { L } = await searchParams;
@@ -15,22 +16,22 @@ async function page({ searchParams }) {
         </h1>
 
         <p className="mb-4">
-          You're being redirected to an external website that contains helpful
-          content or tools related to your interest. We review each link to
-          ensure it's relevant and safe for our users.
+          You{"'"}re being redirected to an external website that contains
+          helpful content or tools related to your interest. We review each link
+          to ensure it{"'"}s relevant and safe for our users.
         </p>
 
         <p className="mb-6">
-          This page will automatically redirect you in a few seconds. If you're
-          not redirected,{" "}
-          <a
+          This page will automatically redirect you in a few seconds. If you
+          {"'"}re not redirected,{" "}
+          <Link
             href={refirectlink}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 underline"
           >
             click here
-          </a>
+          </Link>
           .
         </p>
 

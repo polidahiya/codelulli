@@ -6,19 +6,19 @@ const ads = [
     title: "Stylish Dining Sets for Rent",
     desc: "Modern dining tables and chairs perfect for homes and events. Rent from ₹499/month.",
     img: "https://res.cloudinary.com/dmn8xdsq4/image/upload/v1750682680/Rentbean/i5p65uviyewdreti9dmj.jpg",
-    link: "https://rentbean.in/category/dining",
+    link: "https://rentbean.in/",
   },
   {
     title: "Baby Products on Rent",
     desc: "Strollers, cribs, and toys with safety guaranteed. Starting at ₹299/month.",
     img: "https://res.cloudinary.com/dmn8xdsq4/image/upload/v1739033168/Rentbean/m2osybvwy3gerjaaf2v4.jpg",
-    link: "https://rentbean.in/category/baby-products",
+    link: "https://rentbean.in/",
   },
   {
-    title: "Camping Gear Rental",
-    desc: "Tents, sleeping bags, and more. Perfect for weekend getaways. Hassle-free delivery.",
+    title: "Gaming Consoles (PS4/PS5) on Rent",
+    desc: "Get PlayStation and Xbox consoles delivered to your door. Affordable rental plans available.",
     img: "https://res.cloudinary.com/dmn8xdsq4/image/upload/v1744026849/Rentbean/wimp4zvhgsqouc6qldji.jpg",
-    link: "https://rentbean.in/category/camping",
+    link: "https://rentbean.in/",
   },
 ];
 
