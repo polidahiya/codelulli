@@ -2704,6 +2704,691 @@ export const questions = {
       correct: "[1, 2, 3, 4] [1, 2, 3, 4]",
     },
   ],
+  42: [
+    {
+      question: "What is the result of:\n\nx = (1, 2, 3)\nx[0] = 5",
+      options: [
+        "x becomes (5, 2, 3)",
+        "x becomes (1, 2, 3, 5)",
+        "TypeError",
+        "No change",
+      ],
+      correct: "TypeError",
+    },
+    {
+      question:
+        "What is the output of:\n\nprint([i for i in range(5) if i % 2 == 0])",
+      options: ["[0, 2, 4]", "[1, 3, 5]", "[2, 4]", "[0, 1, 2, 3, 4]"],
+      correct: "[0, 2, 4]",
+    },
+    {
+      question: "Which module in Python is used for serialization?",
+      options: ["pickle", "marshal", "json", "All of the above"],
+      correct: "All of the above",
+    },
+    {
+      question:
+        "What will this code output?\n\ndef foo():\n    try:\n        return 1\n    finally:\n        return 2\n\nprint(foo())",
+      options: ["1", "2", "None", "Error"],
+      correct: "2",
+    },
+    {
+      question:
+        "Which of the following is true about Python memory management?",
+      options: [
+        "Uses manual memory allocation",
+        "Relies entirely on garbage collection",
+        "Uses reference counting with garbage collection as backup",
+        "Has no memory management system",
+      ],
+      correct: "Uses reference counting with garbage collection as backup",
+    },
+    {
+      question:
+        "What will be the output?\n\nx = 'abc'\ny = ''.join([i for i in x if i != 'b'])\nprint(y)",
+      options: ["'ac'", "'ab'", "'bc'", "'abc'"],
+      correct: "'ac'",
+    },
+    {
+      question: "What is the purpose of the `nonlocal` keyword?",
+      options: [
+        "To declare global variables",
+        "To declare class-level variables",
+        "To modify a variable in an enclosing scope (not global)",
+        "To disable variable reassignment",
+      ],
+      correct: "To modify a variable in an enclosing scope (not global)",
+    },
+    {
+      question: "Which of these statements about Python decorators is true?",
+      options: [
+        "They are only used in Flask/Django",
+        "They modify or enhance functions",
+        "They reduce performance significantly",
+        "They must return None",
+      ],
+      correct: "They modify or enhance functions",
+    },
+    {
+      question: "What does the `*args` syntax allow a function to do?",
+      options: [
+        "Accept multiple keyword arguments",
+        "Accept a list as input",
+        "Accept an arbitrary number of positional arguments",
+        "Unpack a dictionary",
+      ],
+      correct: "Accept an arbitrary number of positional arguments",
+    },
+    {
+      question:
+        "Which built-in function will execute another function for each element and return an iterator?",
+      options: ["map()", "filter()", "reduce()", "zip()"],
+      correct: "map()",
+    },
+  ],
+  43: [
+    {
+      question:
+        "What is the output of this code?\n\nx = [1, 2, 3]\ny = x\ndel x[:]\nprint(y)",
+      options: ["[]", "[1, 2, 3]", "None", "Error"],
+      correct: "[]",
+    },
+    {
+      question: "What does `functools.lru_cache` do?",
+      options: [
+        "Limits recursion depth",
+        "Caches the results of expensive function calls",
+        "Increases function speed by multithreading",
+        "Limits memory usage globally",
+      ],
+      correct: "Caches the results of expensive function calls",
+    },
+    {
+      question:
+        "Which of these will NOT raise an error?\n\nx = (1, 2, 3)\nx[0] = 10",
+      options: [
+        "list(x)[0] = 10",
+        "x[0] = 10",
+        "tuple(x)[0] = 10",
+        "x += (4,)",
+      ],
+      correct: "x += (4,)",
+    },
+    {
+      question: "What is the result of:\n\n''.join(reversed('abc'))",
+      options: ["'abc'", "'cba'", "['c', 'b', 'a']", "'None'"],
+      correct: "'cba'",
+    },
+    {
+      question:
+        "Which of the following is true about Python's GIL (Global Interpreter Lock)?",
+      options: [
+        "It improves performance on multicore systems",
+        "It prevents true parallel execution of threads in CPython",
+        "It is required in every Python implementation",
+        "It is used to lock global variables from modification",
+      ],
+      correct: "It prevents true parallel execution of threads in CPython",
+    },
+    {
+      question:
+        "What will this print?\n\nx = [i*i for i in range(3)]\nprint(x)",
+      options: ["[1, 4, 9]", "[0, 1, 4]", "[0, 1, 2]", "[0, 2, 4]"],
+      correct: "[0, 1, 4]",
+    },
+    {
+      question:
+        "What does the following code output?\n\nprint((lambda x: x * 2)(5))",
+      options: ["10", "25", "5", "2"],
+      correct: "10",
+    },
+    {
+      question: "How do you define a property in a Python class?",
+      options: [
+        "Using @property decorator",
+        "Using prop() function",
+        "Using __define__()",
+        "With @attribute",
+      ],
+      correct: "Using @property decorator",
+    },
+    {
+      question:
+        "What is true about list comprehension vs. generator expressions?",
+      options: [
+        "Both return a list",
+        "List comprehensions are lazy-evaluated",
+        "Generator expressions use less memory",
+        "List comprehensions are always faster",
+      ],
+      correct: "Generator expressions use less memory",
+    },
+    {
+      question:
+        "What will this code output?\n\nx = {'a': 1, 'b': 2}\nprint(x.get('c', 3))",
+      options: ["None", "3", "Error", "'c'"],
+      correct: "3",
+    },
+  ],
+  44: [
+    {
+      question: "What is the output of:\n\nprint([i for i in range(3)][-1])",
+      options: ["3", "2", "-1", "0"],
+      correct: "2",
+    },
+    {
+      question:
+        "Which of these is the correct syntax to check if a class is a subclass of another?",
+      options: ["A inherits B", "A is B", "issubclass(A, B)", "A instanceof B"],
+      correct: "issubclass(A, B)",
+    },
+    {
+      question: "What is the result of this code?\n\nx = (1,)\nprint(type(x))",
+      options: [
+        "<class 'int'>",
+        "<class 'tuple'>",
+        "<class 'list'>",
+        "<class 'NoneType'>",
+      ],
+      correct: "<class 'tuple'>",
+    },
+    {
+      question:
+        "What will this print?\n\ndef f():\n    yield from range(3)\nprint(list(f()))",
+      options: ["[0, 1, 2]", "[1, 2, 3]", "[0, 1, 2, 3]", "[1, 2]"],
+      correct: "[0, 1, 2]",
+    },
+    {
+      question:
+        "Which one is **not** a valid way to merge two dictionaries in Python 3.9+?",
+      options: ["a | b", "a.update(b)", "{**a, **b}", "a + b"],
+      correct: "a + b",
+    },
+    {
+      question: "What is the output of:\n\nprint({i: i*i for i in range(3)})",
+      options: [
+        "{0: 0, 1: 1, 2: 4}",
+        "[0, 1, 4]",
+        "{0, 1, 4}",
+        "(0: 0, 1: 1, 2: 4)",
+      ],
+      correct: "{0: 0, 1: 1, 2: 4}",
+    },
+    {
+      question: "What is the main use of the `__init__` method in a class?",
+      options: [
+        "To destroy an object",
+        "To create a method",
+        "To initialize the instance when created",
+        "To define a private method",
+      ],
+      correct: "To initialize the instance when created",
+    },
+    {
+      question:
+        "What will be printed?\n\nx = [1, 2, 3]\nprint(id(x) == id(x[:]))",
+      options: ["True", "False", "Depends on Python version", "Error"],
+      correct: "False", // because slicing creates a new list
+    },
+    {
+      question:
+        "Which of the following statements about `@classmethod` is true?",
+      options: [
+        "It passes the instance as the first argument",
+        "It can only access class variables",
+        "It cannot access the class",
+        "It runs in a separate thread",
+      ],
+      correct: "It can only access class variables",
+    },
+    {
+      question:
+        "Which of the following is true about Python's `with` statement?",
+      options: [
+        "Used only for file handling",
+        "Manages context and ensures proper cleanup",
+        "Only works with try-except blocks",
+        "Automatically closes the program",
+      ],
+      correct: "Manages context and ensures proper cleanup",
+    },
+  ],
+  45: [
+    {
+      question:
+        "What does this code output?\n\nx = [1, 2, 3]\ny = x.copy()\nprint(x is y)",
+      options: ["True", "False", "None", "Error"],
+      correct: "False",
+    },
+    {
+      question:
+        "Which Python module provides tools for working with iterators?",
+      options: ["functools", "collections", "itertools", "operators"],
+      correct: "itertools",
+    },
+    {
+      question: "What is the output of:\n\nprint(bool([]) or bool('False'))",
+      options: ["True", "False", "None", "Error"],
+      correct: "True",
+    },
+    {
+      question: "What does the walrus operator `:=` do in Python?",
+      options: [
+        "Checks for equality",
+        "Assigns and returns a value within an expression",
+        "Swaps variable values",
+        "Declares a global variable",
+      ],
+      correct: "Assigns and returns a value within an expression",
+    },
+    {
+      question: "Which method is used to convert an object into a JSON string?",
+      options: [
+        "json.convert()",
+        "json.stringify()",
+        "json.dumps()",
+        "json.toJSON()",
+      ],
+      correct: "json.dumps()",
+    },
+    {
+      question:
+        "What will this print?\n\nx = 10\ndef f():\n  global x\n  x += 1\nf()\nprint(x)",
+      options: ["11", "10", "Error", "None"],
+      correct: "11",
+    },
+    {
+      question: "What is the output of:\n\nprint((lambda x, y=2: x * y)(3))",
+      options: ["5", "6", "3", "None"],
+      correct: "6",
+    },
+    {
+      question: "Which statement best describes a Python generator function?",
+      options: [
+        "A function that returns multiple values",
+        "A function that runs only once",
+        "A function that uses `yield` to return values one at a time",
+        "A recursive function",
+      ],
+      correct: "A function that uses `yield` to return values one at a time",
+    },
+    {
+      question: "Which of the following will raise a `KeyError`?",
+      options: [
+        "dict.get('missing')",
+        "dict['missing']",
+        "dict.pop('missing', None)",
+        "'missing' not in dict",
+      ],
+      correct: "dict['missing']",
+    },
+    {
+      question: "Which of these is **not** a valid Python data type?",
+      options: ["frozenset", "set", "dict", "array"],
+      correct: "array",
+    },
+  ],
+  46: [
+    {
+      question:
+        "What will be the output?\n\nx = 5\ndef outer():\n    x = 10\n    def inner():\n        nonlocal x\n        x += 1\n        return x\n    return inner()\n\nprint(outer())",
+      options: ["6", "11", "10", "Error"],
+      correct: "11",
+    },
+    {
+      question:
+        "What does the following code return?\n\ndef f(a, b, *, c):\n    return a + b + c\n\nprint(f(1, 2, c=3))",
+      options: ["6", "TypeError", "SyntaxError", "None"],
+      correct: "6",
+    },
+    {
+      question:
+        "Which data structure is best suited for implementing a LIFO (Last-In First-Out) system?",
+      options: ["list", "queue.Queue", "deque", "heapq"],
+      correct: "deque",
+    },
+    {
+      question: 'What is the result of:\n\nprint(repr("\\tTabbed"))',
+      options: ["'\\tTabbed'", "'Tabbed'", "'\\\\tTabbed'", "'\\Tabbed'"],
+      correct: "'\\tTabbed'",
+    },
+    {
+      question:
+        "Which keyword allows a variable to be modified in the outer enclosing function but not global scope?",
+      options: ["outer", "nonlocal", "global", "static"],
+      correct: "nonlocal",
+    },
+    {
+      question: "What does `__name__ == '__main__'` check?",
+      options: [
+        "If a module was imported",
+        "If a module is built-in",
+        "If the script is being run directly",
+        "If the script has a main() function",
+      ],
+      correct: "If the script is being run directly",
+    },
+    {
+      question:
+        "What does the following code return?\n\n{True: 'yes', 1: 'no', 1.0: 'maybe'}",
+      options: [
+        "{True: 'yes', 1: 'no', 1.0: 'maybe'}",
+        "{True: 'maybe'}",
+        "{1.0: 'maybe'}",
+        "{True: 'maybe'}",
+      ],
+      correct: "{True: 'maybe'}", // all same hash
+    },
+    {
+      question:
+        "Which function can be used to introspect attributes of a module or object?",
+      options: ["inspect()", "type()", "dir()", "vars()"],
+      correct: "dir()",
+    },
+    {
+      question: "What does `setdefault()` do in a dictionary?",
+      options: [
+        "Replaces a value if it exists",
+        "Adds a key only if it doesn't exist",
+        "Deletes a key",
+        "Returns the entire dictionary",
+      ],
+      correct: "Adds a key only if it doesn't exist",
+    },
+    {
+      question:
+        "Which of the following can be used to execute dynamic Python code?",
+      options: ["eval()", "exec()", "compile()", "All of the above"],
+      correct: "All of the above",
+    },
+  ],
+  47: [
+    {
+      question: "What will this print?\n\nx = [1, 2, 3]\nprint(x * 2)",
+      options: [
+        "[1, 2, 3, 1, 2, 3]",
+        "[2, 4, 6]",
+        "[[1, 2, 3], [1, 2, 3]]",
+        "[1, 1, 2, 2, 3, 3]",
+      ],
+      correct: "[1, 2, 3, 1, 2, 3]",
+    },
+    {
+      question:
+        "What is the result of:\n\nprint(list(filter(None, [0, '', 1, 'a', False])))",
+      options: ["[1, 'a']", "[0, '', False]", "[0, 1, 'a', False]", "['a']"],
+      correct: "[1, 'a']",
+    },
+    {
+      question: "What is a key difference between `is` and `==` in Python?",
+      options: [
+        "`is` checks for value equality, `==` for identity",
+        "`is` is faster than `==` in all cases",
+        "`is` checks identity, `==` checks value equality",
+        "They are interchangeable",
+      ],
+      correct: "`is` checks identity, `==` checks value equality",
+    },
+    {
+      question:
+        "What will be the result of:\n\nx = [i for i in range(3)]\ndel x[1]\nprint(x)",
+      options: ["[0, 2]", "[1, 2]", "[0, 1]", "[2]"],
+      correct: "[0, 2]",
+    },
+    {
+      question: "Which of these will create an infinite loop?",
+      options: [
+        "while True: pass",
+        "for i in range(0): pass",
+        "for i in range(10): continue",
+        "if True: pass",
+      ],
+      correct: "while True: pass",
+    },
+    {
+      question: "Which statement about Python's memory model is true?",
+      options: [
+        "Variables hold values directly",
+        "Each variable is a pointer to an object",
+        "Every assignment creates a deep copy",
+        "All data types are mutable",
+      ],
+      correct: "Each variable is a pointer to an object",
+    },
+    {
+      question:
+        "What does this return?\n\n{x: x**2 for x in range(3)}.get(4, -1)",
+      options: ["4", "16", "KeyError", "-1"],
+      correct: "-1",
+    },
+    {
+      question:
+        "Which module allows you to work with regular expressions in Python?",
+      options: ["string", "regex", "re", "text"],
+      correct: "re",
+    },
+    {
+      question: "What does the `globals()` function return?",
+      options: [
+        "A dictionary of current global variables",
+        "List of modules",
+        "All Python built-in functions",
+        "Nothing by default",
+      ],
+      correct: "A dictionary of current global variables",
+    },
+    {
+      question: "What does the `__call__` method do in a Python class?",
+      options: [
+        "It makes an object callable like a function",
+        "It initializes a class",
+        "It overrides the `print()` behavior",
+        "It calls another class constructor",
+      ],
+      correct: "It makes an object callable like a function",
+    },
+  ],
+  48: [
+    {
+      question: "What will this code output?\n\nprint(0.1 + 0.2 == 0.3)",
+      options: [
+        "True",
+        "False",
+        "Depends on Python version",
+        "Raises an Error",
+      ],
+      correct: "False", // due to floating point precision issues
+    },
+    {
+      question:
+        "What is the result of this expression?\n\n{1, 2, 3} & {2, 3, 4}",
+      options: ["{2, 3}", "{1, 4}", "{1, 2, 3, 4}", "None"],
+      correct: "{2, 3}",
+    },
+    {
+      question: "What is the output of:\n\nprint(type((1)))",
+      options: [
+        "<class 'tuple'>",
+        "<class 'int'>",
+        "<class 'list'>",
+        "<class 'str'>",
+      ],
+      correct: "<class 'int'>",
+    },
+    {
+      question: "What does this expression return?\n\n''.join(['a', 'b', 'c'])",
+      options: ["'a b c'", "'abc'", "['a', 'b', 'c']", "'a, b, c'"],
+      correct: "'abc'",
+    },
+    {
+      question: "What is the output of:\n\nprint('abc' * 0)",
+      options: ["''", "'abc'", "None", "Error"],
+      correct: "''",
+    },
+    {
+      question:
+        "What is the difference between `isinstance(obj, cls)` and `type(obj) == cls`?",
+      options: [
+        "`type()` supports inheritance, `isinstance()` does not",
+        "`isinstance()` supports inheritance, `type()` does not",
+        "They are functionally identical",
+        "`type()` is always preferred over `isinstance()`",
+      ],
+      correct: "`isinstance()` supports inheritance, `type()` does not",
+    },
+    {
+      question: "What will this print?\n\nprint(all([]))",
+      options: ["True", "False", "None", "Error"],
+      correct: "True", // vacuously true
+    },
+    {
+      question: "What does `re.match()` return if no match is found?",
+      options: ["None", "False", "0", "Raises an Exception"],
+      correct: "None",
+    },
+    {
+      question: "What is the purpose of `__str__` in a class?",
+      options: [
+        "Controls string representation via str() or print()",
+        "Defines object equality",
+        "Creates an instance",
+        "Controls memory address of an object",
+      ],
+      correct: "Controls string representation via str() or print()",
+    },
+    {
+      question:
+        "What is the result of:\n\nprint([i for i in range(3) if i % 2])",
+      options: ["[1]", "[0, 2]", "[0, 1, 2]", "[2]"],
+      correct: "[1]",
+    },
+  ],
+  49: [
+    {
+      question: "What will this print?\n\nprint((lambda x: x and x + 1)(0))",
+      options: ["1", "0", "None", "True"],
+      correct: "0",
+    },
+    {
+      question: "What is the result of:\n\n[x for x in range(5) if x % 2 == 0]",
+      options: ["[1, 3, 5]", "[0, 2, 4]", "[2, 4]", "[1, 2, 3, 4]"],
+      correct: "[0, 2, 4]",
+    },
+    {
+      question: "Which method can be used to convert a list into a tuple?",
+      options: ["tuple()", "tolist()", "convert()", "set()"],
+      correct: "tuple()",
+    },
+    {
+      question: "What does the `pass` keyword do?",
+      options: [
+        "Skips current iteration",
+        "Returns from function",
+        "Acts as a no-op (placeholder)",
+        "Exits the loop",
+      ],
+      correct: "Acts as a no-op (placeholder)",
+    },
+    {
+      question: "Which of the following is **not** a valid Python file mode?",
+      options: ["'r+'", "'w'", "'b+'", "'x+'"],
+      correct: "'x+'", // 'x' is valid, 'x+' is not standard in Python
+    },
+    {
+      question: "What does this return?\n\nall([1, 2, 0, 3])",
+      options: ["True", "False", "None", "Error"],
+      correct: "False",
+    },
+    {
+      question: "Which of the following will **not** raise a `SyntaxError`?",
+      options: [
+        "lambda x: x + 1",
+        "return x",
+        "break",
+        "continue outside loop",
+      ],
+      correct: "lambda x: x + 1",
+    },
+    {
+      question: "What is the output of:\n\nprint({1, 2, 3} == {3, 2, 1})",
+      options: ["True", "False", "Error", "None"],
+      correct: "True",
+    },
+    {
+      question:
+        "What is the output of this expression?\n\nsum(i for i in range(4))",
+      options: ["6", "10", "4", "3"],
+      correct: "6",
+    },
+    {
+      question: "What is the result of:\n\nnot all([True, True, False])",
+      options: ["True", "False", "None", "Error"],
+      correct: "True",
+    },
+  ],
+  50: [
+    {
+      question: "What is the result of:\n\nprint('Python'[::-1])",
+      options: ["'nohtyP'", "'Python'", "'nothyP'", "'error'"],
+      correct: "'nohtyP'",
+    },
+    {
+      question: "What is the output of:\n\nprint(bool('False'))",
+      options: ["True", "False", "Error", "None"],
+      correct: "True",
+    },
+    {
+      question: "Which of the following will raise a `ZeroDivisionError`?",
+      options: ["1 / 0", "1 // 0", "divmod(1, 0)", "All of the above"],
+      correct: "All of the above",
+    },
+    {
+      question:
+        "What is the result of:\n\nx = [1, 2, 3]\nprint(id(x) == id(x[:]))",
+      options: ["True", "False", "None", "Depends on interpreter"],
+      correct: "False",
+    },
+    {
+      question: "Which statement is used to raise an exception manually?",
+      options: ["throw", "raise", "error", "except"],
+      correct: "raise",
+    },
+    {
+      question: "What does this expression evaluate to?\n\n'3' * 3",
+      options: ["'9'", "'333'", "9", "TypeError"],
+      correct: "'333'",
+    },
+    {
+      question: "What is the output of:\n\nprint(type(lambda x: x))",
+      options: [
+        "<class 'function'>",
+        "<class 'lambda'>",
+        "<class 'method'>",
+        "<function lambda()>",
+      ],
+      correct: "<class 'function'>",
+    },
+    {
+      question: "What is the result of:\n\nprint(set('hello') & set('world'))",
+      options: ["{'l', 'o'}", "{'h', 'e', 'l', 'o'}", "{'d', 'r'}", "None"],
+      correct: "{'l', 'o'}",
+    },
+    {
+      question: "What is the result of:\n\nsum([1, 2, 3], 5)",
+      options: ["6", "11", "TypeError", "[5, 1, 2, 3]"],
+      correct: "11",
+    },
+    {
+      question: "What does `enumerate()` return?",
+      options: [
+        "A list of items with their indexes",
+        "An iterator of (index, value) pairs",
+        "Only index values",
+        "Only value list",
+      ],
+      correct: "An iterator of (index, value) pairs",
+    },
+  ],
 };
 
 // https://chatgpt.com/share/6871f6d4-fce0-800a-8dcf-4895c3406885

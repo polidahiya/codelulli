@@ -43,4 +43,19 @@ async function page({ params }) {
   );
 }
 
+export async function generateMetadata({ params }) {
+  const { page = 1 } = await params;
+
+  return {
+    title: `Python Quiz - ${page} Online – Test Your Python Skills with 100+ Questions`,
+    description:
+      "Take our free Python quiz and test your programming knowledge with over 100 curated questions. Improve your Python skills with instant feedback and explanations. Great for beginners and experienced developers!",
+    keywords:
+      "python quiz, python quiz online, python mcq, python test, python multiple choice questions, python practice quiz, python programming quiz, python online test, python coding quiz, python beginner quiz, advanced python quiz",
+    // openGraph: {
+    //   images: ogImage,
+    // },
+  };
+}
+
 export default page;

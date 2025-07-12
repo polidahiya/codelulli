@@ -39,7 +39,7 @@ export default function Options({ q, qIndex, page }) {
               className={`py-2 px-4 rounded border text-left transition-all ${bgColor} text-gray-900 dark:text-gray-100`}
               disabled={isAnswered}
             >
-              {option}
+              <pre>{option}</pre>
             </button>
           );
         })}
