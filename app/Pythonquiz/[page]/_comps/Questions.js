@@ -1455,6 +1455,1255 @@ export const questions = {
       correct: "{2, 3}",
     },
   ],
+  24: [
+    {
+      question: "What is the output of:\n\nx = [1, 2, 3]\nprint(x[1:])",
+      options: ["[1, 2]", "[2, 3]", "[1, 2, 3]", "[1]"],
+      correct: "[2, 3]",
+    },
+    {
+      question: "Which of the following data types is unordered and unindexed?",
+      options: ["list", "set", "tuple", "dict"],
+      correct: "set",
+    },
+    {
+      question: "What does the `any()` function return?",
+      options: [
+        "True if all elements are true",
+        "True if at least one element is true",
+        "False if all are true",
+        "Length of a list",
+      ],
+      correct: "True if at least one element is true",
+    },
+    {
+      question: "What is the result of:\n\nsorted([3, 1, 2])",
+      options: ["[1, 2, 3]", "[3, 2, 1]", "[3, 1, 2]", "(1, 2, 3)"],
+      correct: "[1, 2, 3]",
+    },
+    {
+      question: "What is the scope of a variable declared inside a function?",
+      options: ["Global", "Block", "Function", "Module"],
+      correct: "Function",
+    },
+    {
+      question: "What is the output of:\n\nlist('abc')",
+      options: [
+        "['abc']",
+        "['a', 'b', 'c']",
+        "('a', 'b', 'c')",
+        "{'a', 'b', 'c'}",
+      ],
+      correct: "['a', 'b', 'c']",
+    },
+    {
+      question: "Which of the following will raise a `ZeroDivisionError`?",
+      options: ["10 / 2", "10 // 0", "10 * 0", "10 % 5"],
+      correct: "10 // 0",
+    },
+    {
+      question:
+        "Which function is used to iterate over two lists simultaneously?",
+      options: ["zip()", "enumerate()", "range()", "map()"],
+      correct: "zip()",
+    },
+    {
+      question: "What does `isinstance(x, list)` return?",
+      options: [
+        "True if x is a list",
+        "True if x is a string",
+        "Length of x",
+        "Type of x",
+      ],
+      correct: "True if x is a list",
+    },
+    {
+      question: "Which operator can be used to combine two sets?",
+      options: ["+", "&", "|", "*"],
+      correct: "|",
+    },
+  ],
+  25: [
+    {
+      question: "What will be the output of:\n\nprint('hello'.capitalize())",
+      options: ["'Hello'", "'hello'", "'HELLO'", "'Hello.'"],
+      correct: "'Hello'",
+    },
+    {
+      question:
+        "Which of the following is not a valid way to declare a dictionary?",
+      options: [
+        "dict1 = {}",
+        "dict2 = dict()",
+        "dict3 = {'a': 1, 'b': 2}",
+        "dict4 = ([1, 2], [3, 4])",
+      ],
+      correct: "dict4 = ([1, 2], [3, 4])",
+    },
+    {
+      question:
+        "What is the output of:\n\nprint([i for i in range(5) if i % 2 == 0])",
+      options: ["[1, 3, 5]", "[0, 2, 4]", "[2, 4]", "[1, 3]"],
+      correct: "[0, 2, 4]",
+    },
+    {
+      question: "Which of these statements is true about Python functions?",
+      options: [
+        "Functions must always return a value",
+        "Functions can return multiple values",
+        "Functions cannot be nested",
+        "Functions cannot accept default arguments",
+      ],
+      correct: "Functions can return multiple values",
+    },
+    {
+      question: "What does the `id()` function do?",
+      options: [
+        "Returns the data type",
+        "Returns the memory location of the object",
+        "Returns the name of the variable",
+        "Returns the hash value",
+      ],
+      correct: "Returns the memory location of the object",
+    },
+    {
+      question: "What is the result of:\n\nbool([]) and bool('False')",
+      options: ["True", "False", "None", "Error"],
+      correct: "False", // [] is falsy, so the whole expression is False
+    },
+    {
+      question: "Which of the following can be keys in a dictionary?",
+      options: ["Lists", "Sets", "Tuples", "Dictionaries"],
+      correct: "Tuples",
+    },
+    {
+      question: "What does `re.match()` return if the pattern is not found?",
+      options: ["False", "0", "None", "Empty string"],
+      correct: "None",
+    },
+    {
+      question:
+        "How many times will this loop run?\n\nfor i in range(1, 10, 3):\n    print(i)",
+      options: ["10", "4", "3", "Infinite"],
+      correct: "3", // [1, 4, 7]
+    },
+    {
+      question: "What is the output of:\n\nprint({i: i*i for i in range(3)})",
+      options: [
+        "{0: 0, 1: 1, 2: 4}",
+        "[0, 1, 4]",
+        "(0:0, 1:1, 2:4)",
+        "{0, 1, 2}",
+      ],
+      correct: "{0: 0, 1: 1, 2: 4}",
+    },
+  ],
+  26: [
+    {
+      question: "What is the output of:\n\nprint(bool('False'))",
+      options: ["False", "True", "None", "Error"],
+      correct: "True",
+    },
+    {
+      question:
+        "Which of these data structures is best for fast membership testing?",
+      options: ["List", "Tuple", "Set", "Dictionary"],
+      correct: "Set",
+    },
+    {
+      question:
+        "What will be the output of:\n\nx = [1, 2, 3]\ny = x[:]\nx.append(4)\nprint(y)",
+      options: ["[1, 2, 3]", "[1, 2, 3, 4]", "[4]", "Error"],
+      correct: "[1, 2, 3]",
+    },
+    {
+      question: "What is the output of:\n\nprint('2' + '3' * 2)",
+      options: ["'232'", "'233'", "'26'", "'2' + 6"],
+      correct: "'233'",
+    },
+    {
+      question: "Which of these methods modifies the original list?",
+      options: ["sorted()", "reversed()", "sort()", "all()"],
+      correct: "sort()",
+    },
+    {
+      question:
+        "Which of the following exceptions is raised when a variable is not defined?",
+      options: ["KeyError", "TypeError", "NameError", "ValueError"],
+      correct: "NameError",
+    },
+    {
+      question:
+        "Which operator is used to unpack function arguments from a list or tuple?",
+      options: ["**", "&", "*", "//"],
+      correct: "*",
+    },
+    {
+      question:
+        "What is the output of:\n\nprint(list(map(lambda x: x*2, [1, 2, 3])))",
+      options: ["[2, 4, 6]", "[1, 2, 3]", "[1, 4, 9]", "[2, 3, 4]"],
+      correct: "[2, 4, 6]",
+    },
+    {
+      question:
+        "Which file mode is used to create a new file or overwrite if it exists?",
+      options: ["'a'", "'x'", "'w'", "'r+'"],
+      correct: "'w'",
+    },
+    {
+      question: "What will be the output of:\n\nprint({1, 2, 3} - {2})",
+      options: ["{1, 3}", "[1, 3]", "(1, 3)", "{2, 3}"],
+      correct: "{1, 3}",
+    },
+  ],
+  27: [
+    {
+      question: "What is the output of:\n\nprint(type(lambda x: x))",
+      options: [
+        "<class 'function'>",
+        "<class 'lambda'>",
+        "<class 'method'>",
+        "<class 'object'>",
+      ],
+      correct: "<class 'function'>",
+    },
+    {
+      question: "What does the `strip()` method do to a string?",
+      options: [
+        "Removes whitespace from both ends",
+        "Removes characters from the middle",
+        "Replaces spaces with underscores",
+        "Splits the string",
+      ],
+      correct: "Removes whitespace from both ends",
+    },
+    {
+      question:
+        "Which function would you use to read the entire contents of a file into a string?",
+      options: [
+        "file.readall()",
+        "file.read()",
+        "file.readlines()",
+        "file.load()",
+      ],
+      correct: "file.read()",
+    },
+    {
+      question: "What is the result of:\n\nall([True, 1, 'a'])",
+      options: ["True", "False", "Error", "None"],
+      correct: "True",
+    },
+    {
+      question:
+        "What is the output of:\n\nprint({x: x**2 for x in range(3) if x % 2 == 1})",
+      options: ["{0: 0, 1: 1, 2: 4}", "{1: 1}", "{2: 4}", "{}"],
+      correct: "{1: 1}",
+    },
+    {
+      question: "What will this return?\n\n'def' in {'abc', 'def', 'ghi'}",
+      options: ["True", "False", "Error", "'def'"],
+      correct: "True",
+    },
+    {
+      question:
+        "Which method is used to check if a string starts with a certain substring?",
+      options: ["startwith()", "startswith()", "isstart()", "starts()"],
+      correct: "startswith()",
+    },
+    {
+      question: "What does this code print?\n\nprint(list(range(5, 0, -2)))",
+      options: ["[5, 4, 3, 2, 1]", "[5, 3, 1]", "[5, 2]", "[5, 0]"],
+      correct: "[5, 3, 1]",
+    },
+    {
+      question: "Which of these is a valid way to merge two sets `a` and `b`?",
+      options: ["a.merge(b)", "a + b", "a | b", "a & b"],
+      correct: "a | b",
+    },
+    {
+      question:
+        "What is the correct way to define a default value in a function parameter?",
+      options: [
+        "def func(a, b=2):",
+        "def func(a=2, b):",
+        "def func(a: int = 2):",
+        "Both A and C",
+      ],
+      correct: "Both A and C",
+    },
+  ],
+  28: [
+    {
+      question:
+        "What will this output?\n\nx = {'a': 1, 'b': 2}\nprint(x.get('c', 3))",
+      options: ["None", "KeyError", "3", "0"],
+      correct: "3",
+    },
+    {
+      question: "What is the output of:\n\nprint(bool(''))",
+      options: ["True", "False", "None", "Error"],
+      correct: "False",
+    },
+    {
+      question: "Which of the following will remove a key from a dictionary?",
+      options: [
+        "del dict[key]",
+        "dict.remove(key)",
+        "dict.pop(key)",
+        "Both A and C",
+      ],
+      correct: "Both A and C",
+    },
+    {
+      question: "What does the `enumerate()` function return?",
+      options: [
+        "Only index",
+        "Only value",
+        "Tuple of index and value",
+        "Key-value pairs",
+      ],
+      correct: "Tuple of index and value",
+    },
+    {
+      question: "What is the output of:\n\nprint([1, 2] * 2)",
+      options: ["[2, 4]", "[1, 2, 1, 2]", "[1, 2, 2]", "[1, 1, 2, 2]"],
+      correct: "[1, 2, 1, 2]",
+    },
+    {
+      question:
+        "Which of the following is used to define a block of code in Python?",
+      options: ["Braces {}", "Parentheses ()", "Indentation", "Colon"],
+      correct: "Indentation",
+    },
+    {
+      question:
+        "Which method is used to return the number of items in a dictionary?",
+      options: ["len()", "count()", "size()", "length()"],
+      correct: "len()",
+    },
+    {
+      question:
+        "What will be the output of:\n\nx = 5\ndef foo():\n    x = 10\nfoo()\nprint(x)",
+      options: ["5", "10", "Error", "None"],
+      correct: "5",
+    },
+    {
+      question: "Which of the following is used to define a class method?",
+      options: [
+        "@staticmethod",
+        "@classmethod",
+        "@function",
+        "None of the above",
+      ],
+      correct: "@classmethod",
+    },
+    {
+      question: "Which Python module is used for regular expressions?",
+      options: ["regex", "re", "string", "search"],
+      correct: "re",
+    },
+  ],
+  29: [
+    {
+      question: "What is the output of:\n\nprint('Python'[::-1])",
+      options: ["'nohtyP'", "'Python'", "'Pytho'", "'Error'"],
+      correct: "'nohtyP'",
+    },
+    {
+      question: "Which keyword is used to create a generator function?",
+      options: ["return", "yield", "gen", "async"],
+      correct: "yield",
+    },
+    {
+      question: "Which of the following is true about Python lists?",
+      options: [
+        "Lists are immutable",
+        "Lists are ordered",
+        "Lists are fixed-size",
+        "Lists only hold one data type",
+      ],
+      correct: "Lists are ordered",
+    },
+    {
+      question: "What will be the output of:\n\nx = [0, 1, 2, 3]\nprint(x[-2])",
+      options: ["2", "3", "1", "Error"],
+      correct: "2",
+    },
+    {
+      question: "What does `set.add()` do?",
+      options: [
+        "Adds one item to a set",
+        "Adds multiple items to a set",
+        "Creates a new set",
+        "Adds a key-value pair",
+      ],
+      correct: "Adds one item to a set",
+    },
+    {
+      question: "What is the correct way to catch any exception in Python?",
+      options: ["except all:", "except Exception:", "except:", "except error:"],
+      correct: "except Exception:",
+    },
+    {
+      question: "What is the result of:\n\n'a' in ['a', 'b', 'c']",
+      options: ["True", "False", "'a'", "None"],
+      correct: "True",
+    },
+    {
+      question: "What is the output of:\n\nx = [1, 2, 3]\nprint(len(x))",
+      options: ["2", "3", "4", "None"],
+      correct: "3",
+    },
+    {
+      question:
+        "Which of the following will convert a list of characters into a string?",
+      options: [
+        "str(['a', 'b'])",
+        "' + '.join(['a', 'b'])",
+        "join(['a', 'b'])",
+        "''.join(['a', 'b'])",
+      ],
+      correct: "''.join(['a', 'b'])",
+    },
+    {
+      question: "Which of the following is a mutable data type in Python?",
+      options: ["tuple", "str", "list", "frozenset"],
+      correct: "list",
+    },
+  ],
+  30: [
+    {
+      question: "What is the output of:\n\nprint((1, 2) + (3, 4))",
+      options: ["(1, 2, 3, 4)", "[1, 2, 3, 4]", "Error", "(4, 6)"],
+      correct: "(1, 2, 3, 4)",
+    },
+    {
+      question:
+        "Which of the following is used to handle exceptions in Python?",
+      options: ["try-except", "catch-throw", "error-trap", "do-catch"],
+      correct: "try-except",
+    },
+    {
+      question: "What is the output of:\n\nprint(type([x for x in range(3)]))",
+      options: [
+        "<class 'tuple'>",
+        "<class 'generator'>",
+        "<class 'list'>",
+        "<class 'set'>",
+      ],
+      correct: "<class 'list'>",
+    },
+    {
+      question: "Which Python function converts a string to a list of words?",
+      options: ["split()", "join()", "tokenize()", "words()"],
+      correct: "split()",
+    },
+    {
+      question: "What does `dict.keys()` return?",
+      options: [
+        "A list of values",
+        "A list of key-value pairs",
+        "A view object of keys",
+        "A tuple of keys",
+      ],
+      correct: "A view object of keys",
+    },
+    {
+      question: "Which module is used to work with dates and times in Python?",
+      options: ["datetime", "timeit", "calendar", "dateutil"],
+      correct: "datetime",
+    },
+    {
+      question: "What is the output of:\n\nbool(0) or bool(1)",
+      options: ["True", "False", "None", "Error"],
+      correct: "True",
+    },
+    {
+      question:
+        "Which of the following functions is used to get user input in Python 3?",
+      options: ["input()", "get()", "read()", "scan()"],
+      correct: "input()",
+    },
+    {
+      question: "What is the result of:\n\nnot (True and False)",
+      options: ["True", "False", "None", "Error"],
+      correct: "True",
+    },
+    {
+      question: "Which of these opens a file for both reading and writing?",
+      options: ["'r+'", "'rw'", "'w+'", "'r/w'"],
+      correct: "'r+'",
+    },
+  ],
+  31: [
+    {
+      question: "What is the result of:\n\nsum([i for i in range(4)])",
+      options: ["6", "10", "4", "3"],
+      correct: "6",
+    },
+    {
+      question:
+        "Which keyword allows a function to access a global variable for modification?",
+      options: ["access", "global", "nonlocal", "extern"],
+      correct: "global",
+    },
+    {
+      question: "What does this return?\n\nlen(set([1, 2, 2, 3]))",
+      options: ["4", "2", "3", "1"],
+      correct: "3",
+    },
+    {
+      question: "Which statement is true about Python tuples?",
+      options: [
+        "They are mutable",
+        "They can contain duplicate elements",
+        "They are unordered",
+        "They use square brackets",
+      ],
+      correct: "They can contain duplicate elements",
+    },
+    {
+      question: "Which of the following will raise a `ValueError`?",
+      options: ["int('123')", "int('abc')", "int(123.45)", "int(True)"],
+      correct: "int('abc')",
+    },
+    {
+      question: "What is the output of:\n\nprint(' '.join(['a', 'b', 'c']))",
+      options: ["'abc'", "'a b c'", "'a, b, c'", "'a b c '"],
+      correct: "'a b c'",
+    },
+    {
+      question:
+        "Which of these is used to define a constant in Python by convention?",
+      options: ["ALL_CAPS", "lower_case", "camelCase", "PascalCase"],
+      correct: "ALL_CAPS",
+    },
+    {
+      question:
+        "What does this list comprehension do?\n\n[x for x in range(10) if x % 2 == 0]",
+      options: [
+        "Generates odd numbers up to 10",
+        "Generates numbers divisible by 3",
+        "Generates even numbers up to 10",
+        "Creates a list of squares",
+      ],
+      correct: "Generates even numbers up to 10",
+    },
+    {
+      question:
+        "Which keyword is used to pass control to the outer loop in nested loops?",
+      options: ["pass", "continue", "skip", "None of the above"],
+      correct: "None of the above", // Python has no keyword for this; you'd use a flag or function
+    },
+    {
+      question:
+        "Which data type would be best for representing a collection of unique items?",
+      options: ["list", "dict", "set", "tuple"],
+      correct: "set",
+    },
+  ],
+  32: [
+    {
+      question: "What is the result of:\n\nprint(list(range(2, 10, 3)))",
+      options: [
+        "[2, 3, 4, 5, 6, 7, 8, 9]",
+        "[2, 5, 8]",
+        "[2, 6, 10]",
+        "[3, 6, 9]",
+      ],
+      correct: "[2, 5, 8]",
+    },
+    {
+      question: "Which of the following is NOT a built-in Python function?",
+      options: ["max()", "sum()", "append()", "type()"],
+      correct: "append()",
+    },
+    {
+      question: "What will this expression return?\n\nlen('Python') == 6",
+      options: ["True", "False", "Error", "'True'"],
+      correct: "True",
+    },
+    {
+      question: "Which of these is used to convert a string to lowercase?",
+      options: ["str.lower()", "string.lower()", "str.toLower()", "lower(str)"],
+      correct: "str.lower()",
+    },
+    {
+      question: "Which operator is used for exponentiation in Python?",
+      options: ["^", "**", "^^", "exp()"],
+      correct: "**",
+    },
+    {
+      question: "Which keyword is used to define an inline anonymous function?",
+      options: ["def", "lambda", "inline", "function"],
+      correct: "lambda",
+    },
+    {
+      question: "What is the output of:\n\nprint('hello'.title())",
+      options: ["'Hello'", "'HELLO'", "'Hello World'", "'Hello'"],
+      correct: "'Hello'",
+    },
+    {
+      question: "Which of the following creates an empty set?",
+      options: ["{}", "[]", "set()", "()"],
+      correct: "set()",
+    },
+    {
+      question: "What does `break` do inside a loop?",
+      options: [
+        "Skips one iteration",
+        "Terminates the loop",
+        "Restarts the loop",
+        "Pauses the loop",
+      ],
+      correct: "Terminates the loop",
+    },
+    {
+      question:
+        "Which built-in function is used to iterate over a sequence with an index?",
+      options: ["map()", "enumerate()", "zip()", "range()"],
+      correct: "enumerate()",
+    },
+  ],
+  33: [
+    {
+      question: "What is the result of:\n\nprint(10 % 3)",
+      options: ["1", "3", "0", "10"],
+      correct: "1",
+    },
+    {
+      question:
+        "Which statement is used to skip the current iteration of a loop?",
+      options: ["break", "pass", "continue", "skip"],
+      correct: "continue",
+    },
+    {
+      question: "What is the correct way to define a function in Python?",
+      options: [
+        "function myFunc():",
+        "def myFunc():",
+        "create myFunc():",
+        "func myFunc():",
+      ],
+      correct: "def myFunc():",
+    },
+    {
+      question: "What is the output of:\n\nprint(2 == 2.0)",
+      options: ["True", "False", "Error", "None"],
+      correct: "True",
+    },
+    {
+      question:
+        "Which method returns the index of the first match of a substring?",
+      options: ["match()", "find()", "index()", "search()"],
+      correct: "find()",
+    },
+    {
+      question: "What will be the result of:\n\nbool([]) and bool({})",
+      options: ["True", "False", "Error", "None"],
+      correct: "False",
+    },
+    {
+      question: "Which of the following will reverse a list in-place?",
+      options: [
+        "list.reverse()",
+        "reversed(list)",
+        "list[::-1]",
+        "reverse(list)",
+      ],
+      correct: "list.reverse()",
+    },
+    {
+      question: "What is the output of:\n\nlen({'a': 1, 'b': 2})",
+      options: ["1", "2", "3", "0"],
+      correct: "2",
+    },
+    {
+      question:
+        "Which function is used to return a sorted version of a list without changing the original?",
+      options: ["sort()", "order()", "sorted()", "reverse()"],
+      correct: "sorted()",
+    },
+    {
+      question: "What does the `pass` keyword do in Python?",
+      options: [
+        "Exits a function",
+        "Skips iteration",
+        "Acts as a placeholder and does nothing",
+        "Skips a loop",
+      ],
+      correct: "Acts as a placeholder and does nothing",
+    },
+  ],
+  34: [
+    {
+      question: "What is the result of:\n\nprint(type({}))",
+      options: [
+        "<class 'dict'>",
+        "<class 'set'>",
+        "<class 'list'>",
+        "<class 'tuple'>",
+      ],
+      correct: "<class 'dict'>",
+    },
+    {
+      question:
+        "Which of the following will convert a string '123' into an integer?",
+      options: ["int('123')", "str(123)", "float('123')", "eval(123)"],
+      correct: "int('123')",
+    },
+    {
+      question: "What is the output of:\n\nprint(10 // 3)",
+      options: ["3.33", "3", "4", "3.0"],
+      correct: "3",
+    },
+    {
+      question: "Which function will return the absolute value of a number?",
+      options: ["abs()", "fabs()", "math.abs()", "absolute()"],
+      correct: "abs()",
+    },
+    {
+      question: "What is the correct way to catch multiple exceptions?",
+      options: [
+        "except IOError or ValueError:",
+        "except (IOError, ValueError):",
+        "except IOError, ValueError:",
+        "except: IOError, ValueError",
+      ],
+      correct: "except (IOError, ValueError):",
+    },
+    {
+      question: "What does the `zip()` function return?",
+      options: [
+        "A tuple",
+        "A dictionary",
+        "A zip object (iterator of tuples)",
+        "A list",
+      ],
+      correct: "A zip object (iterator of tuples)",
+    },
+    {
+      question: "Which of these removes all items from a list?",
+      options: ["del list", "list.remove()", "list.clear()", "list = []"],
+      correct: "list.clear()",
+    },
+    {
+      question: "What is the output of:\n\nlen('Hello World')",
+      options: ["11", "10", "12", "None"],
+      correct: "11",
+    },
+    {
+      question: "What does `list(map(str, [1, 2, 3]))` return?",
+      options: [
+        "['1', '2', '3']",
+        "[1, 2, 3]",
+        "['str1', 'str2', 'str3']",
+        "[str, str, str]",
+      ],
+      correct: "['1', '2', '3']",
+    },
+    {
+      question:
+        "Which of the following is **not** a valid boolean value in Python?",
+      options: ["True", "False", "None", "truth"],
+      correct: "truth",
+    },
+  ],
+  35: [
+    {
+      question: "What is the result of:\n\nprint((2 + 3) * 4)",
+      options: ["20", "14", "10", "24"],
+      correct: "20",
+    },
+    {
+      question:
+        "Which method can be used to remove an item from a list by value?",
+      options: ["pop()", "delete()", "remove()", "discard()"],
+      correct: "remove()",
+    },
+    {
+      question: "What does the following return?\n\n'spam'.replace('a', 'o')",
+      options: ["'spom'", "'spam'", "'spoa'", "'spomam'"],
+      correct: "'spom'",
+    },
+    {
+      question:
+        "Which built-in function is used to return the largest item in an iterable?",
+      options: ["max()", "highest()", "top()", "biggest()"],
+      correct: "max()",
+    },
+    {
+      question: "What is the output of:\n\n'hello'.count('l')",
+      options: ["1", "2", "3", "0"],
+      correct: "2",
+    },
+    {
+      question: "What does `int(True)` return?",
+      options: ["0", "1", "True", "Error"],
+      correct: "1",
+    },
+    {
+      question: "Which data type is returned by input() in Python 3?",
+      options: ["int", "str", "bool", "float"],
+      correct: "str",
+    },
+    {
+      question:
+        "What is the correct syntax to check if a key exists in a dictionary?",
+      options: [
+        "if key in dict:",
+        "if dict has key:",
+        "if dict.contains(key):",
+        "if key exists dict:",
+      ],
+      correct: "if key in dict:",
+    },
+    {
+      question: "What will this code print?\n\nprint('python' > 'Python')",
+      options: ["True", "False", "Error", "None"],
+      correct: "True", // lowercase > uppercase in Unicode
+    },
+    {
+      question: "What is the result of:\n\n[1, 2, 3] + [4, 5]",
+      options: [
+        "[1, 2, 3, 4, 5]",
+        "[5, 4, 3, 2, 1]",
+        "[1, 2, 3] + [4, 5]",
+        "Error",
+      ],
+      correct: "[1, 2, 3, 4, 5]",
+    },
+  ],
+  36: [
+    {
+      question: "What is the result of:\n\nprint(bool(0.0))",
+      options: ["True", "False", "None", "Error"],
+      correct: "False",
+    },
+    {
+      question: "Which of these methods can be used to copy a list?",
+      options: [
+        "list.copy()",
+        "list[:]",
+        "copy.copy(list)",
+        "All of the above",
+      ],
+      correct: "All of the above",
+    },
+    {
+      question: "What is the correct way to remove the last item from a list?",
+      options: ["list.pop()", "list.remove()", "list.delete()", "list.drop()"],
+      correct: "list.pop()",
+    },
+    {
+      question: "What is the output of:\n\nprint('a' * 3)",
+      options: ["'aaa'", "'a3'", "'aa'", "['a', 'a', 'a']"],
+      correct: "'aaa'",
+    },
+    {
+      question: "Which method adds an element to the end of a list?",
+      options: ["add()", "push()", "append()", "insert()"],
+      correct: "append()",
+    },
+    {
+      question:
+        "Which operator checks if two variables reference the same object?",
+      options: ["==", "!=", "is", "in"],
+      correct: "is",
+    },
+    {
+      question: "What is the result of:\n\nnot 0 and 1",
+      options: ["True", "1", "False", "0"],
+      correct: "1",
+    },
+    {
+      question: "Which data structure allows duplicate values?",
+      options: ["set", "tuple", "dictionary keys", "frozenset"],
+      correct: "tuple",
+    },
+    {
+      question: "What is the output of:\n\nprint('1,2,3'.split(','))",
+      options: ["['1', '2', '3']", "'1 2 3'", "(1, 2, 3)", "{1, 2, 3}"],
+      correct: "['1', '2', '3']",
+    },
+    {
+      question: "What does `list.index(value)` do?",
+      options: [
+        "Deletes the value from the list",
+        "Returns the first index of the value",
+        "Adds the value to the end",
+        "Sorts the list",
+      ],
+      correct: "Returns the first index of the value",
+    },
+  ],
+  37: [
+    {
+      question:
+        "Which keyword is used to define a block of code that runs regardless of exceptions?",
+      options: ["always", "finally", "lastly", "ensure"],
+      correct: "finally",
+    },
+    {
+      question: "What is the output of:\n\nprint(2 ** 3 ** 2)",
+      options: ["64", "512", "256", "16"],
+      correct: "512", // because it evaluates as 2 ** (3 ** 2)
+    },
+    {
+      question: "What does this return?\n\nsorted([3, 1, 2], reverse=True)",
+      options: ["[3, 2, 1]", "[1, 2, 3]", "[2, 3, 1]", "[1, 3, 2]"],
+      correct: "[3, 2, 1]",
+    },
+    {
+      question: "Which method is used to add multiple elements to a list?",
+      options: ["append()", "extend()", "add()", "merge()"],
+      correct: "extend()",
+    },
+    {
+      question: "What is the output of:\n\nbool([]) == False",
+      options: ["True", "False", "None", "Error"],
+      correct: "True",
+    },
+    {
+      question: "What does `list.insert(0, 'a')` do?",
+      options: [
+        "Adds 'a' at the beginning of the list",
+        "Replaces the first item with 'a'",
+        "Appends 'a' to the list",
+        "Removes the first item",
+      ],
+      correct: "Adds 'a' at the beginning of the list",
+    },
+    {
+      question:
+        "What is the output of:\n\nprint('Python'.lower().capitalize())",
+      options: ["'python'", "'Python'", "'PYTHON'", "'Python.'"],
+      correct: "'Python'",
+    },
+    {
+      question: "What does the `in` keyword check?",
+      options: [
+        "If a loop is running",
+        "If a value exists in a sequence",
+        "If a file is open",
+        "If a function is defined",
+      ],
+      correct: "If a value exists in a sequence",
+    },
+    {
+      question: "What does `round(4.6)` return?",
+      options: ["4", "5", "4.5", "Error"],
+      correct: "5",
+    },
+    {
+      question: "Which of the following is a correct dictionary definition?",
+      options: [
+        "{'a', 1, 'b', 2}",
+        "dict('a':1, 'b':2)",
+        "{'a': 1, 'b': 2}",
+        "{a=1, b=2}",
+      ],
+      correct: "{'a': 1, 'b': 2}",
+    },
+  ],
+  38: [
+    {
+      question: "What is the output of:\n\nprint('hello world'.capitalize())",
+      options: [
+        "'Hello World'",
+        "'Hello world'",
+        "'HELLO WORLD'",
+        "'hello world'",
+      ],
+      correct: "'Hello world'",
+    },
+    {
+      question:
+        "Which of the following is a valid way to define a set in Python?",
+      options: ["set = {}", "set = []", "set = set()", "set = dict()"],
+      correct: "set = set()",
+    },
+    {
+      question: "What is the result of:\n\nprint(bool('False'))",
+      options: ["True", "False", "None", "Error"],
+      correct: "True",
+    },
+    {
+      question: "What does `enumerate(['a', 'b', 'c'])` return?",
+      options: [
+        "[(0, 'a'), (1, 'b'), (2, 'c')]",
+        "['a', 'b', 'c']",
+        "[(1, 'a'), (2, 'b'), (3, 'c')]",
+        "[0, 1, 2]",
+      ],
+      correct: "[(0, 'a'), (1, 'b'), (2, 'c')]",
+    },
+    {
+      question: "Which method converts a dictionary's keys into a list?",
+      options: [
+        "dict.toList()",
+        "list(dict)",
+        "dict.keys().list()",
+        "dict.keys()",
+      ],
+      correct: "list(dict)",
+    },
+    {
+      question: "What is the result of:\n\nprint((5 < 3) or (8 > 6))",
+      options: ["True", "False", "Error", "None"],
+      correct: "True",
+    },
+    {
+      question: "Which method returns a copy of a dictionary?",
+      options: ["copy()", "clone()", "replicate()", "copydict()"],
+      correct: "copy()",
+    },
+    {
+      question: "What does `[::-1]` do in a list?",
+      options: [
+        "Returns the list unchanged",
+        "Sorts the list",
+        "Reverses the list",
+        "Duplicates the list",
+      ],
+      correct: "Reverses the list",
+    },
+    {
+      question:
+        "Which built-in function is used to iterate two lists together?",
+      options: ["map()", "zip()", "enumerate()", "reduce()"],
+      correct: "zip()",
+    },
+    {
+      question: "Which type of error will this raise?\n\nint('abc')",
+      options: ["TypeError", "ValueError", "NameError", "SyntaxError"],
+      correct: "ValueError",
+    },
+  ],
+  39: [
+    {
+      question: "What is the output of:\n\nprint(type(lambda x: x))",
+      options: [
+        "<class 'function'>",
+        "<class 'lambda'>",
+        "<class 'method'>",
+        "<class 'object'>",
+      ],
+      correct: "<class 'function'>",
+    },
+    {
+      question:
+        "What will this expression return?\n\nall([True, 1, 'non-empty'])",
+      options: ["True", "False", "Error", "None"],
+      correct: "True",
+    },
+    {
+      question:
+        "Which Python keyword is used to define a block that runs only when a condition is false?",
+      options: ["else", "elif", "not", "otherwise"],
+      correct: "else",
+    },
+    {
+      question: "What is the output of:\n\nprint({1, 2, 3} == {3, 2, 1})",
+      options: ["True", "False", "None", "Error"],
+      correct: "True",
+    },
+    {
+      question:
+        "Which method returns the number of times a value appears in a list?",
+      options: ["count()", "index()", "repeat()", "find()"],
+      correct: "count()",
+    },
+    {
+      question: "What does the `any()` function return?",
+      options: [
+        "True if all elements are True",
+        "True if at least one element is True",
+        "False if all are True",
+        "Raises an error for empty iterable",
+      ],
+      correct: "True if at least one element is True",
+    },
+    {
+      question: "What is the result of:\n\nprint(3 in [1, 2, 3, 4])",
+      options: ["True", "False", "3", "Error"],
+      correct: "True",
+    },
+    {
+      question: "Which of these will throw a ZeroDivisionError?",
+      options: ["10 / 2", "10 // 2", "10 % 0", "10 * 0"],
+      correct: "10 % 0",
+    },
+    {
+      question: "Which keyword is used to create a custom exception?",
+      options: ["create", "raise", "throw", "exception"],
+      correct: "raise",
+    },
+    {
+      question:
+        "Which statement is used to skip the execution of the rest of a loop’s current iteration?",
+      options: ["break", "pass", "skip", "continue"],
+      correct: "continue",
+    },
+  ],
+  40: [
+    {
+      question: "What is the result of:\n\nprint([1, 2, 3][1])",
+      options: ["1", "2", "3", "Error"],
+      correct: "2",
+    },
+    {
+      question: "What will this print?\n\nprint('python'.isalpha())",
+      options: ["True", "False", "None", "Error"],
+      correct: "True",
+    },
+    {
+      question:
+        "Which method is used to convert all characters in a string to uppercase?",
+      options: ["capitalize()", "title()", "upper()", "uppercase()"],
+      correct: "upper()",
+    },
+    {
+      question: "Which of the following returns a dictionary's values?",
+      options: ["dict.values()", "dict.get()", "dict.items()", "dict.keys()"],
+      correct: "dict.values()",
+    },
+    {
+      question: "What does this expression evaluate to?\n\nnot (10 > 5)",
+      options: ["True", "False", "None", "Error"],
+      correct: "False",
+    },
+    {
+      question: "What is the output of:\n\nprint(type([]) == list)",
+      options: ["True", "False", "None", "Error"],
+      correct: "True",
+    },
+    {
+      question: "What will this return?\n\nmin([5, 3, 9])",
+      options: ["3", "5", "9", "Error"],
+      correct: "3",
+    },
+    {
+      question: "What does the `del` keyword do?",
+      options: [
+        "Deletes a variable or item",
+        "Clears memory",
+        "Uninstalls a package",
+        "None of the above",
+      ],
+      correct: "Deletes a variable or item",
+    },
+    {
+      question: "Which function returns the Unicode code of a character?",
+      options: ["chr()", "ord()", "ascii()", "str()"],
+      correct: "ord()",
+    },
+    {
+      question: "What is the output of:\n\nprint(type((1)))",
+      options: [
+        "<class 'int'>",
+        "<class 'tuple'>",
+        "<class 'list'>",
+        "<class 'str'>",
+      ],
+      correct: "<class 'int'>",
+    },
+  ],
+  41: [
+    {
+      question:
+        "What will be the output of this code?\n\ndef func(a, b=[]):\n    b.append(a)\n    return b\n\nprint(func(1))\nprint(func(2))",
+      options: [
+        "[1] and [2]",
+        "[1] and [1, 2]",
+        "[1] and [1]",
+        "[1, 2] and [1, 2]",
+      ],
+      correct: "[1] and [1, 2]",
+    },
+    {
+      question:
+        "What is the result of:\n\nprint([i for i in range(3)] == list(map(lambda x: x, range(3))))",
+      options: ["True", "False", "TypeError", "None"],
+      correct: "True",
+    },
+    {
+      question: "What is the purpose of `__slots__` in Python classes?",
+      options: [
+        "It makes the class abstract",
+        "It defines default values for attributes",
+        "It restricts creation of dynamic attributes and saves memory",
+        "It enables multiple inheritance",
+      ],
+      correct: "It restricts creation of dynamic attributes and saves memory",
+    },
+    {
+      question:
+        "What will this print?\n\ndef gen():\n    yield 1\n    yield 2\n    return 3\n\nprint(list(gen()))",
+      options: ["[1, 2, 3]", "[1, 2]", "[1, 2, None]", "Error"],
+      correct: "[1, 2]",
+    },
+    {
+      question:
+        "What is a key difference between `@staticmethod` and `@classmethod`?",
+      options: [
+        "classmethod receives the instance; staticmethod does not",
+        "classmethod receives the class as first argument; staticmethod receives nothing",
+        "staticmethod is faster",
+        "staticmethod can only be used in inheritance",
+      ],
+      correct:
+        "classmethod receives the class as first argument; staticmethod receives nothing",
+    },
+    {
+      question: "What is the output of:\n\nprint({x for x in 'banana'})",
+      options: [
+        "['b', 'a', 'n']",
+        "('b', 'a', 'n')",
+        "{'b', 'a', 'n'}",
+        "['banana']",
+      ],
+      correct: "{'b', 'a', 'n'}",
+    },
+    {
+      question:
+        "Which of the following is **not** true about Python generators?",
+      options: [
+        "They maintain state between calls",
+        "They use less memory than lists",
+        "They are faster than lists in all cases",
+        "They are defined using the `yield` keyword",
+      ],
+      correct: "They are faster than lists in all cases",
+    },
+    {
+      question:
+        "What does this output?\n\nx = (i*i for i in range(3))\nprint(next(x), next(x))",
+      options: ["0 1", "1 4", "0 4", "0 2"],
+      correct: "0 1",
+    },
+    {
+      question: "How do you make a shallow copy of a list in Python?",
+      options: [
+        "list.copy()",
+        "list[:]",
+        "copy.copy(list)",
+        "All of the above",
+      ],
+      correct: "All of the above",
+    },
+    {
+      question:
+        "What will this output?\n\nx = [1, 2, 3]\ny = x\nx += [4]\nprint(x, y)",
+      options: [
+        "[1, 2, 3, 4] [1, 2, 3]",
+        "[1, 2, 3, 4] [1, 2, 3, 4]",
+        "[1, 2, 3] [1, 2, 3, 4]",
+        "Error",
+      ],
+      correct: "[1, 2, 3, 4] [1, 2, 3, 4]",
+    },
+  ],
 };
 
 // https://chatgpt.com/share/6871f6d4-fce0-800a-8dcf-4895c3406885
