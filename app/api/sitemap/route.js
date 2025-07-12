@@ -2,6 +2,8 @@
 import { getcollection } from "../../Mongodb";
 import { questions } from "@/app/Pythonquiz/[page]/_comps/Questions";
 
+const domain = "https://codelulli.vercel.app";
+
 const xmlEscape = (str) =>
   str
     ?.replace(/&/g, "&amp;")
@@ -14,7 +16,7 @@ const today = new Date().toISOString();
 
 const generateLinkurls = (allLinks) =>
   allLinks.map((link) => ({
-    loc: `https://codelulli.vercel.app/C/${link?.linknumber}`,
+    loc: `${domain}/C/${link?.linknumber}`,
     lastmod: today,
     changefreq: "daily",
     priority: "0.9",
@@ -22,7 +24,7 @@ const generateLinkurls = (allLinks) =>
 
 const quizlinks = () =>
   Object.keys(questions).map((key) => ({
-    loc: `https://codelulli.vercel.app/pythonquiz/${key}`,
+    loc: `${domain}/pythonquiz/${key}`,
     lastmod: today,
     changefreq: "daily",
     priority: "0.9",

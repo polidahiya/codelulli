@@ -1,5 +1,4 @@
 import "./globals.css";
-import Script from "next/script";
 import Googleanayltics from "./Googleananlytics";
 import { Mulish } from "next/font/google";
 import Navbar from "./_comps/navbar/Navbar";
@@ -43,15 +42,12 @@ export default function RootLayout({ children }) {
         {/* google analytics */}
         <Googleanayltics />
         {/* google adsense */}
-        <Script
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398670337880164"
-          crossorigin="anonymous"
-        ></Script>
-        <meta
-          name="google-adsense-account"
-          content="ca-pub-7398670337880164"
-        ></meta>
+          crossOrigin="anonymous"
+        ></script>
+        <meta name="google-adsense-account" content="ca-pub-7398670337880164" />
         {/* search console verification */}
         {/* url */}
         <meta
