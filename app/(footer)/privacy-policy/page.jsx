@@ -42,15 +42,15 @@ export default function PrivacyPolicyPage() {
       </p>
 
       <h2 className="text-xl font-semibold mt-6 mb-2">5. Contact</h2>
-      {/* <p>
+      <p>
         Email us at:{" "}
         <a
           className="text-blue-600 underline"
-          href="mailto:your-email@example.com"
+          href="mailto:polidahiya830@gmail.com"
         >
-          your-email@example.com
+          mail
         </a>
-      </p> */}
+      </p>
     </div>
   );
 }

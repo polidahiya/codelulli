@@ -9,8 +9,8 @@ import Footer from "./_comps/Footer";
 
 const mulish = Mulish({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"], // choose weights you need
-  style: ["normal", "italic"], // optional
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
