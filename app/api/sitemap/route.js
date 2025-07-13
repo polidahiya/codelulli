@@ -1,8 +1,7 @@
 "use server";
 import { getcollection } from "../../Mongodb";
-import { questions } from "@/app/Pythonquiz/[page]/_comps/Questions";
-
-const domain = "https://codelulli.vercel.app";
+import { domain } from "@/app/metadata";
+import programminglink from "@/app/(programming)/sitemaplinks";
 
 const xmlEscape = (str) =>
   str
@@ -22,19 +21,11 @@ const generateLinkurls = (allLinks) =>
     priority: "0.9",
   }));
 
-const quizlinks = () =>
-  Object.keys(questions).map((key) => ({
-    loc: `${domain}/pythonquiz/${key}`,
-    lastmod: today,
-    changefreq: "daily",
-    priority: "0.9",
-  }));
-
 export async function GET() {
   try {
     const { Linkscollection } = await getcollection();
     const allLinks = await Linkscollection.find().toArray();
-    const allUrls = [...generateLinkurls(allLinks), ...quizlinks()];
+    const allUrls = [...generateLinkurls(allLinks), ...programminglink()];
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"

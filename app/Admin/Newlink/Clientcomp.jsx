@@ -6,6 +6,7 @@ import { Savelink, Deletelink } from "./Savelink";
 import Copybutton from "../Copybutton";
 import { AppContextfn } from "@/app/Context";
 import { useRouter } from "next/navigation";
+import { domain } from "@/app/metadata";
 
 export default function Clientcomp({ edit }) {
   const router = useRouter();
@@ -41,7 +42,7 @@ export default function Clientcomp({ edit }) {
     const res = await Savelink(data);
     if (res.status == 200) {
       setdata(initialstates);
-      setmessage(`https://codelulli.vercel.app/C/${res?.linknumber}`);
+      setmessage(`${domain}/C/${res?.linknumber}`);
     }
     setloading(false);
   };

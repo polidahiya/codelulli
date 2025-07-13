@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Copybutton from "../Copybutton";
+import { domain } from "@/app/metadata";
 
 function Linktolink() {
   const [inputLink, setInputLink] = useState("");
@@ -12,7 +13,7 @@ function Linktolink() {
       const url = new URL(inputLink); // Validate input
       const cleanLink = url.hostname + url.pathname + url.search;
       const encoded = encodeURIComponent(cleanLink);
-      setGeneratedLink(`https://codelulli.vercel.app/L?L=${encoded}`);
+      setGeneratedLink(`${domain}/L?L=${encoded}`);
     } catch {
       setGeneratedLink("Invalid URL");
     }
@@ -48,7 +49,9 @@ function Linktolink() {
           >
             {generatedLink}
           </a>
-          <span className="ml-2"><Copybutton link={generatedLink} /></span>
+          <span className="ml-2">
+            <Copybutton link={generatedLink} />
+          </span>
         </div>
       )}
     </div>

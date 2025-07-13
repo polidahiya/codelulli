@@ -3,6 +3,7 @@ import { getcollection } from "../Mongodb";
 import Copybutton from "./Copybutton";
 import Link from "next/link";
 import Linktolink from "./_comps/Linktolink";
+import { domain } from "../metadata";
 
 export default async function Page({ searchParams }) {
   const { search = "", page = 1 } = await searchParams;
@@ -71,7 +72,7 @@ export default async function Page({ searchParams }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mt-5">
         {data.map((item, i) => {
-          const ourlink = `https://codelulli.vercel.app/C/${item?.linknumber}`;
+          const ourlink = `${domain}/C/${item?.linknumber}`;
           return (
             <div
               key={i}
