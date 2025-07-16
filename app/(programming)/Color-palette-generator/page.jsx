@@ -7,7 +7,7 @@ function page() {
       <ColorPaletteGenerator />
       <p className="max-w-3xl text-center text-gray-600 dark:text-gray-300 mb-6 mx-auto">
         Easily generate beautiful color palettes with this free online tool.
-        Whether you're a web designer, frontend developer, or creative artist,
+        Whether you&lsquo;re a web designer, frontend developer, or creative artist,
         this generator helps you discover perfect color combinations for your
         projects. Choose how many colors you need, copy hex codes with a click,
         and explore previously generated palettes for inspiration. Fast, simple,
