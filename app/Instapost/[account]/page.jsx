@@ -30,7 +30,7 @@ function page() {
           className="flex justify-between items-center rounded-2xl shadow bg-white dark:bg-gray-900 p-2 !no-underline"
         >
           <img
-            src=""
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSRIWjfrZRnaHdqPNkspOxYCXZUUOwnNr5kvG95OM8ilogm37yR"
             alt=""
             className="w-20 aspect-square rounded-lg border border-gray-300 dark:border-gray-700"
           />

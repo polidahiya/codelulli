@@ -1,20 +1,39 @@
-import { questions } from "./Pythonquiz/[page]/_comps/Questions";
 import { domain } from "../metadata";
 
-const directlinks = ["/Leetcodequestions"];
+export const directlinks = [
+  {
+    link: "/Leetcodequestions",
+    title: "Leet code questions",
+    img: "/Images/Programming/Leetcodequestions.png",
+  },
+  {
+    link: "/Color-palette-generator",
+    title: "Color palette generator",
+    img: "/Images/Programming/colorpalategenerator.png",
+  },
+  {
+    link: "/Responsive-preview",
+    title: "Responsive preview",
+    img: "/Images/Programming/responsivepreview.png",
+  },
+  {
+    link: "/Css-clip-path-generator",
+    title: "Css clip path generator",
+    img: "/Images/Programming/clippathgenerator.png",
+  },
+  {
+    link: "/pythonquiz/1",
+    title: "Python quiz",
+    img: "/Images/Programming/pythonquiz.png",
+  },
+];
 export default function programminglink() {
   const today = new Date().toISOString();
-  const links1 = Object.keys(questions).map((key) => ({
-    loc: `${domain}/pythonquiz/${key}`,
-    lastmod: today,
-    changefreq: "daily",
-    priority: "0.9",
-  }));
   const links2 = directlinks.map((link) => ({
-    loc: `${domain}${link}`,
+    loc: `${domain}${link?.link}`,
     lastmod: today,
     changefreq: "daily",
     priority: "0.9",
   }));
-  return [...links1, ...links2];
+  return [...links2];
 }

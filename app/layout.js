@@ -6,6 +6,7 @@ import Context from "./Context";
 import Confirmdialogbox from "./_comps/Confirmationdialogbox";
 import CookieConsent from "./_comps/Cookiesconsent";
 import Footer from "./_comps/Footer";
+import { Googleadsid } from "./metadata";
 
 const mulish = Mulish({
   subsets: ["latin"],
@@ -44,10 +45,10 @@ export default function RootLayout({ children }) {
         {/* google adsense */}
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398670337880164"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${Googleadsid}`}
           crossOrigin="anonymous"
         ></script>
-        <meta name="google-adsense-account" content="ca-pub-7398670337880164" />
+        <meta name="google-adsense-account" content={Googleadsid} />
         {/* search console verification */}
         {/* url */}
         <meta

@@ -22,7 +22,7 @@ export default function Options({ q, qIndex, page }) {
           const isAnswered = qIndex in selectedAnswers;
 
           let bgColor =
-            "bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700";
+            "bg-white hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700";
           if (isAnswered) {
             if (isCorrect)
               bgColor =

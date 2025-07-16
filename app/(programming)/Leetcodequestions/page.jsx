@@ -449,8 +449,5 @@ export async function generateMetadata() {
       "Explore 100+ LeetCode questions organized by DSA patterns like Sliding Window, Two Pointers, Dynamic Programming, Binary Trees, and more. Practice 10 top problems per category to master interviews efficiently.",
     keywords:
       "leetcode questions by topic, leetcode categorized questions, dsa patterns leetcode, sliding window leetcode, dynamic programming problems, binary tree questions, two pointers problems, coding interview prep, leetcode top questions, data structures and algorithms practice",
-    // openGraph: {
-    //   images: ogImage,
-    // },
   };
 }
