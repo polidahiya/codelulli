@@ -3,7 +3,7 @@ import Options from "./_comps/Options";
 import { questions } from "./_comps/Questions";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Ads from "./_comps/Ads";
+import Ads from "@/app/_comps/ads/Ads";
 
 async function page({ params }) {
   const { page = 1 } = await params;
@@ -36,8 +36,12 @@ async function page({ params }) {
           Python Quiz
         </h1>
         {questionset.map((q, qIndex) => (
-          <Options q={q} qIndex={qIndex} key={q.question} page={page} />
+          <React.Fragment key={q.question}>
+            <Options q={q} qIndex={qIndex} page={page} />
+            {qIndex % 4 == 0 && <Ads type={2} />}
+          </React.Fragment>
         ))}
+
         {/* next and prev buttons */}
         <div className="flex gap-4 mt-10">
           {questions[previousquiz] && (
@@ -61,7 +65,7 @@ async function page({ params }) {
         </div>
       </div>
       <aside className="hidden md:block w-96 sticky top-20 max-h-screen bg-white">
-        <Ads />
+        <Ads type={3} />
       </aside>
     </div>
   );
