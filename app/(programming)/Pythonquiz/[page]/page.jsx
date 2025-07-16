@@ -3,7 +3,7 @@ import Options from "./_comps/Options";
 import { questions } from "./_comps/Questions";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Googleadsid } from "@/app/metadata";
+import Ads from "./_comps/Ads";
 
 async function page({ params }) {
   const { page = 1 } = await params;
@@ -61,14 +61,7 @@ async function page({ params }) {
         </div>
       </div>
       <aside className="hidden md:block w-96 sticky top-20 max-h-screen bg-white">
-        <ins
-          className="adsbygoogle"
-          style={{ display: "block", width: "100%", height: "600px" }}
-          data-ad-client={Googleadsid}
-          data-ad-slot="1234567890"
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        ></ins>
+        <Ads />
       </aside>
     </div>
   );

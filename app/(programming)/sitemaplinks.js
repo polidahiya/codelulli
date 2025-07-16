@@ -22,7 +22,7 @@ export const directlinks = [
     img: "/Images/Programming/clippathgenerator.png",
   },
   {
-    link: "/pythonquiz/1",
+    link: "/Pythonquiz/1",
     title: "Python quiz",
     img: "/Images/Programming/pythonquiz.png",
   },
