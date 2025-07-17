@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Ads from "@/app/_comps/ads/Ads";
 
 const leetcodeQuestions = {
   slidingWindow: [
@@ -434,6 +435,7 @@ export default function page() {
                 );
               })}
             </ul>
+            <Ads type={2} />
           </div>
         ))}
       </div>

@@ -5,7 +5,7 @@ function page() {
   return (
     <div>
       <ClipPathPage />
-      <section className="px-4 md:px-10 py-10 text-gray-800">
+      <section className="px-4 md:px-10 py-10">
         <h1 className="text-4xl font-bold mb-6">
           CSS Clip-Path Polygon Shapes – Free Collection for Web Developers
         </h1>
