@@ -17,18 +17,32 @@ async function Navbar() {
           <div className="flex items-center gap-2">
             <Menubutton />
             <Link href="/" className="flex items-center gap-1">
-              <Image src={"/logo.png"} width={40} height={40} alt={"logo"} className="p-1"/>
+              <Image
+                src={"/logo.png"}
+                width={40}
+                height={40}
+                alt={"logo"}
+                className="p-1"
+              />
             </Link>
           </div>
           <div className="flex items-center space-x-4">
             <Themeswitchbutton />
             {isadmin && (
-              <Link
-                href="/Admin"
-                className="px-5 py-1 shadow-sm rounded-full dark:bg-zinc-500 dark:text-white"
-              >
-                Admin
-              </Link>
+              <>
+                <Link
+                  href="/Instapost/admin"
+                  className="px-5 py-1 shadow-sm rounded-full dark:bg-zinc-500 dark:text-white mr-2"
+                >
+                  Insta Admin
+                </Link>
+                <Link
+                  href="/Admin"
+                  className="px-5 py-1 shadow-sm rounded-full dark:bg-zinc-500 dark:text-white"
+                >
+                  Admin
+                </Link>
+              </>
             )}
           </div>
         </div>

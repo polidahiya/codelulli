@@ -14,6 +14,7 @@ async function connectToDatabase() {
     collections = {
       sitedata: db.collection("sitedata"),
       Linkscollection: db.collection("Links"),
+      Instapostscollection: db.collection("Instaposts"),
     };
   }
 

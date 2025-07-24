@@ -1,22 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import Standardinputfield from "../_comps/Standardinputfield";
-import StandardTextAreaField from "../_comps/Standardtextfield";
-import { Savelink, Deletelink } from "./Savelink";
-import Copybutton from "../Copybutton";
+import Standardinputfield from "@/app/Admin/_comps/Standardinputfield";
+import { Savepost, Deletepost } from "./Savepost";
 import { AppContextfn } from "@/app/Context";
 import { useRouter } from "next/navigation";
-import { domain } from "@/app/metadata";
 
 export default function Clientcomp({ edit }) {
   const router = useRouter();
   const { setshowdialog } = AppContextfn();
   const initialstates = {
     link: "",
-    seotitle: "",
-    seodescription: "",
-    seokeywords: "",
-    body: "",
+    heading: "",
+    subheading: "",
+    imagelink: "",
   };
 
   const [data, setdata] = useState(edit || initialstates);
@@ -39,10 +35,10 @@ export default function Clientcomp({ edit }) {
     e.preventDefault();
     setloading(true);
 
-    const res = await Savelink(data);
+    const res = await Savepost(data);
+    setmessage(res?.message);
     if (res.status == 200) {
       setdata(initialstates);
-      setmessage(`${domain}/C/${res?.linknumber}`);
     }
     setloading(false);
   };
@@ -61,47 +57,27 @@ export default function Clientcomp({ edit }) {
           clear={() => handleClearField("link")}
         />
         <Standardinputfield
-          titlename="Seo title"
+          titlename="Heading"
           isRequired={false}
-          value={data.seotitle || ""}
-          onchange={(e) => handleChange("seotitle", e.target.value)}
-          clear={() => handleClearField("seotitle")}
+          value={data.heading || ""}
+          onchange={(e) => handleChange("heading", e.target.value)}
+          clear={() => handleClearField("heading")}
         />
         <Standardinputfield
-          titlename="Seo description"
+          titlename="Sub Heading"
           isRequired={false}
-          value={data.seodescription || ""}
-          onchange={(e) => handleChange("seodescription", e.target.value)}
-          clear={() => handleClearField("seodescription")}
+          value={data.subheading || ""}
+          onchange={(e) => handleChange("subheading", e.target.value)}
+          clear={() => handleClearField("subheading")}
         />
         <Standardinputfield
-          titlename="Seo keywords (Seperate keywords with ,)"
+          titlename="Image Link"
           isRequired={false}
-          value={data.seokeywords || ""}
-          onchange={(e) => handleChange("seokeywords", e.target.value)}
-          clear={() => handleClearField("seokeywords")}
+          value={data.imagelink || ""}
+          onchange={(e) => handleChange("imagelink", e.target.value)}
+          clear={() => handleClearField("imagelink")}
         />
-        <div className="flex flex-col md:flex-row  gap-5 w-full">
-          <div className="flex-1 flex flex-col items-stretch ">
-            <p className="block text-sm  font-medium text-gray-600">Preview</p>
-            <div
-              dangerouslySetInnerHTML={{ __html: data.body || "" }}
-              className="text border rounded-md mt-1 p-2 h-full"
-            ></div>
-          </div>
-          <div className="flex-1">
-            <StandardTextAreaField
-              titlename="Body"
-              isRequired={false}
-              value={data.body || ""}
-              onchange={(e) => handleChange("body", e.target.value)}
-              clear={() => handleClearField("body")}
-            />
-          </div>
-        </div>
-        <p>
-          {message} <Copybutton link={message} />
-        </p>
+        <p>{message}</p>
         <div className="flex items-center justify-center gap-5">
           <button
             type="submit"
@@ -134,7 +110,7 @@ export default function Clientcomp({ edit }) {
                     type: false,
                     title: "Are you sure you want to delete this link ?",
                     continue: async () => {
-                      const res = await Deletelink(data._id);
+                      const res = await Deletepost(data._id);
                       router.push("/Admin");
                     },
                   })

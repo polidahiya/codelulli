@@ -47,7 +47,6 @@ async function page({ params }) {
           {questions[previousquiz] && (
             <Link
               href={`/Pythonquiz/${Number(page) - 1}`}
-              target="_blank"
               className="flex-1 text-center px-6 py-2 rounded-md border border-gray-300 bg-white hover:bg-gray-100 text-gray-800 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-700 transition-all"
             >
               ← Previous
@@ -56,7 +55,6 @@ async function page({ params }) {
           {questions[nextquiz] && (
             <Link
               href={`/Pythonquiz/${Number(page) + 1}`}
-              target="_blank"
               className="flex-1 text-center px-6 py-2 rounded-md border border-blue-500 bg-blue-100 hover:bg-blue-200 text-blue-800 font-medium dark:bg-blue-900 dark:text-blue-100 dark:border-blue-600 dark:hover:bg-blue-800 transition-all"
             >
               Next →

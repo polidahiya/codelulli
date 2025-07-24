@@ -465,7 +465,7 @@ export default function ClipPathPage() {
       <h1 className="text-3xl font-bold mb-6">CSS Clip-path Generator</h1>
 
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="sticky top-20 h-fit">
+        <div className="sticky top-20 h-fit bg-white z-20">
           {/* display */}
           <div
             ref={boxRef}
@@ -591,7 +591,7 @@ export default function ClipPathPage() {
             </div>
           </div>
           {/* Shape Select */}
-          <div className="grid grid-cols-7 gap-4 my-4">
+          <div className="grid grid-cols-5 md:grid-cols-7 gap-4 my-4">
             {shapeOptions.map((shape) => {
               let previewClip;
               if (polygonPresets[shape]) {

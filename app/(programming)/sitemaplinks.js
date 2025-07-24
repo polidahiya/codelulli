@@ -26,6 +26,11 @@ export const directlinks = [
     title: "Python quiz",
     img: "/Images/Programming/pythonquiz.png",
   },
+  {
+    link: "/Box-Shadow-Generator",
+    title: "Box Shadow Generator",
+    img: "/Images/Programming/pythonquiz.png",
+  },
 ];
 export default function programminglink() {
   const today = new Date().toISOString();
