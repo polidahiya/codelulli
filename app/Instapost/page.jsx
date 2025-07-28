@@ -40,10 +40,7 @@ async function page() {
                 Edit
               </Link>
             )}
-            <Link
-              href={`/L?L=${post?.link.replace("https://", "")}`}
-              className="flex justify-between items-center rounded-2xl shadow bg-white dark:bg-gray-900 p-2 !no-underline"
-            >
+            <div className="flex justify-between items-center rounded-2xl shadow bg-white dark:bg-gray-900 p-2 !no-underline">
               <img
                 src={post?.imagelink || "/Images/Instapost/browalibaat.png"}
                 alt={post?.heading}
@@ -60,7 +57,7 @@ async function page() {
               <button className="shadow-sm rounded-full w-10 h-10 bg-red-600 text-white mr-5">
                 &#10140;
               </button>
-            </Link>
+            </div>
           </div>
         ))}
         {verified && (
