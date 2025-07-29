@@ -9,10 +9,8 @@ export default function Clientcomp({ edit }) {
   const router = useRouter();
   const { setshowdialog } = AppContextfn();
   const initialstates = {
-    link: "",
     heading: "",
     subheading: "",
-    imagelink: "",
   };
 
   const [data, setdata] = useState(edit || initialstates);
@@ -50,13 +48,6 @@ export default function Clientcomp({ edit }) {
         className="p-2 pb-20 md:p-6 bg-white space-y-6"
       >
         <Standardinputfield
-          titlename="Link"
-          isRequired={false}
-          value={data.link || ""}
-          onchange={(e) => handleChange("link", e.target.value)}
-          clear={() => handleClearField("link")}
-        />
-        <Standardinputfield
           titlename="Heading"
           isRequired={false}
           value={data.heading || ""}
@@ -69,13 +60,6 @@ export default function Clientcomp({ edit }) {
           value={data.subheading || ""}
           onchange={(e) => handleChange("subheading", e.target.value)}
           clear={() => handleClearField("subheading")}
-        />
-        <Standardinputfield
-          titlename="Image Link"
-          isRequired={false}
-          value={data.imagelink || ""}
-          onchange={(e) => handleChange("imagelink", e.target.value)}
-          clear={() => handleClearField("imagelink")}
         />
         <p>{message}</p>
         <div className="flex items-center justify-center gap-5">

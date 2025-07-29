@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { getcollection } from "../Mongodb";
 import Verification from "../Verifytoken";
+import Ads from "../_comps/ads/Ads";
 
 async function page() {
   const { verified } = await Verification();
@@ -27,38 +28,42 @@ async function page() {
           #memes | #fyp
         </div>
       </div>
+      <Ads type={1} />
 
       {/* Posts List */}
       <div className="flex flex-col gap-5 mt-5">
         {posts.map((post, i) => (
-          <div key={i} className="relative">
-            {verified && (
-              <Link
-                href={`/Instapost/admin?edit=${post?._id.toString()}`}
-                className="absolute z-10 top-1/2 right-0 -translate-x-1/2 -translate-y-1/2 rounded-md px-5 py-2 bg-white border"
-              >
-                Edit
-              </Link>
-            )}
-            <div className="flex justify-between items-center rounded-2xl shadow bg-white dark:bg-gray-900 p-2 !no-underline">
-              <img
-                src={post?.imagelink || "/Images/Instapost/browalibaat.png"}
-                alt={post?.heading}
-                className="w-20 aspect-square rounded-lg border border-gray-300 dark:border-gray-700"
-              />
-              <div className="flex-1 px-5">
-                <div className="text-xl text-gray-800 dark:text-white font-medium">
-                  {post?.heading}
+          <React.Fragment key={i}>
+            <div className="relative">
+              {verified && (
+                <Link
+                  href={`/Instapost/admin?edit=${post?._id.toString()}`}
+                  className="absolute z-10 top-1/2 right-0 -translate-x-1/2 -translate-y-1/2 rounded-md px-5 py-2 bg-white border"
+                >
+                  Edit
+                </Link>
+              )}
+              <div className="flex justify-between items-center rounded-2xl shadow bg-white dark:bg-gray-900 p-2 !no-underline">
+                <img
+                  src={post?.imagelink || "/Images/Instapost/browalibaat.png"}
+                  alt={post?.heading}
+                  className="w-20 aspect-square rounded-lg border border-gray-300 dark:border-gray-700"
+                />
+                <div className="flex-1 px-5">
+                  <div className="text-xl text-gray-800 dark:text-white font-medium">
+                    {post?.heading}
+                  </div>
+                  <div className="text-gray-400 dark:text-gray-500 text-sm">
+                    {post?.subheading}
+                  </div>
                 </div>
-                <div className="text-gray-400 dark:text-gray-500 text-sm">
-                  {post?.subheading}
-                </div>
+                <button className="shadow-sm rounded-full w-10 h-10 bg-red-600 text-white mr-5">
+                  &#10140;
+                </button>
               </div>
-              <button className="shadow-sm rounded-full w-10 h-10 bg-red-600 text-white mr-5">
-                &#10140;
-              </button>
             </div>
-          </div>
+            {(i + 1) % 5 == 0 && <Ads type={2} />}
+          </React.Fragment>
         ))}
         {verified && (
           <Link
@@ -69,6 +74,7 @@ async function page() {
           </Link>
         )}
       </div>
+      <Ads type={2} />
     </div>
   );
 }
