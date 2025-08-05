@@ -29,7 +29,7 @@ export const directlinks = [
   {
     link: "/Box-Shadow-Generator",
     title: "Box Shadow Generator",
-    img: "/Images/Programming/pythonquiz.png",
+    img: "/Images/Programming/boxshadow.png",
   },
 ];
 export default function programminglink() {
