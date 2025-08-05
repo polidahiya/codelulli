@@ -1,45 +1,30 @@
 import React from "react";
 import Clientcomp from "./Clientcomp";
+import { metadatafn, metadata } from "./Data";
+import { notFound } from "next/navigation";
+import Link from "next/link";
 
-function page() {
-  const data = {
-    "Andhra Pradesh": "Amaravati",
-    "Arunachal Pradesh": "Itanagar",
-    Assam: "Dispur",
-    Bihar: "Patna",
-    Chhattisgarh: "Raipur",
-    Goa: "Panaji",
-    Gujarat: "Gandhinagar",
-    Haryana: "Chandigarh",
-    "Himachal Pradesh": "Shimla",
-    Jharkhand: "Ranchi",
-    Karnataka: "Bengaluru",
-    Kerala: "Thiruvananthapuram",
-    "Madhya Pradesh": "Bhopal",
-    Maharashtra: "Mumbai",
-    Manipur: "Imphal",
-    Meghalaya: "Shillong",
-    Mizoram: "Aizawl",
-    Nagaland: "Kohima",
-    Odisha: "Bhubaneswar",
-    Punjab: "Chandigarh",
-    Rajasthan: "Jaipur",
-    Sikkim: "Gangtok",
-    "Tamil Nadu": "Chennai",
-    Telangana: "Hyderabad",
-    Tripura: "Agartala",
-    "Uttar Pradesh": "Lucknow",
-    Uttarakhand: "Dehradun",
-    "West Bengal": "Kolkata",
-  };
+async function page({ params }) {
+  const { listname } = await params;
+  const data = metadatafn(listname);
+  if (!data) return notFound();
 
   return (
     <div>
-      <Clientcomp
-        data={data}
-        qline={"What is the capital of ____?"}
-        title="Capital of states of India"
-      />
+      <Clientcomp data={data?.data} qline={data?.qline} title={data?.title} />
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+        {Object.entries(metadata).map(([key, value]) => (
+          <Link
+            href={`/Gk/${key}`}
+            key={key}
+            className="block p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-all"
+          >
+            <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100">
+              {value?.title}
+            </h3>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
