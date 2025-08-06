@@ -198,46 +198,397 @@ const classicalDancers = {
   "Guru Vempati Chinna Satyam": "Kuchipudi",
 };
 
+const nationalParksstates = {
+  "Jim Corbett National Park": "Uttarakhand",
+  "Kaziranga National Park": "Assam",
+  "Ranthambore National Park": "Rajasthan",
+  "Sundarbans National Park": "West Bengal",
+  "Gir Forest National Park": "Gujarat",
+  "Bandipur National Park": "Karnataka",
+  "Kanha National Park": "Madhya Pradesh",
+  "Pench National Park": "Madhya Pradesh",
+  "Satpura National Park": "Madhya Pradesh",
+  "Periyar National Park": "Kerala",
+  "Hemis National Park": "Ladakh",
+  "Manas National Park": "Assam",
+  "Bandhavgarh National Park": "Madhya Pradesh",
+  "Nagarhole National Park": "Karnataka",
+  "Keoladeo National Park": "Rajasthan",
+  "Dudhwa National Park": "Uttar Pradesh",
+  "Valley of Flowers National Park": "Uttarakhand",
+  "Silent Valley National Park": "Kerala",
+  "Great Himalayan National Park": "Himachal Pradesh",
+  "Indravati National Park": "Chhattisgarh",
+};
+
+const nationalparkfamousfor = {
+  "India's first national park, famous for Bengal tigers and dense forest safaris":
+    "Jim Corbett National Park",
+  "Known for the largest population of one-horned rhinoceroses":
+    "Kaziranga National Park",
+  "Famous for tiger sightings and ancient Ranthambore Fort":
+    "Ranthambore National Park",
+  "Home to the Royal Bengal Tiger and mangrove forests":
+    "Sundarbans National Park",
+  "The only place in the world to see Asiatic lions in the wild":
+    "Gir Forest National Park",
+  "Part of the Nilgiri Biosphere, known for elephants and tigers":
+    "Bandipur National Park",
+  "Inspiration for Rudyard Kipling's *The Jungle Book*, rich in flora and fauna":
+    "Kanha National Park",
+  "Also linked to *The Jungle Book*, known for tigers and leopards":
+    "Pench National Park",
+  "Famous for unique jeep, boat and walking safaris": "Satpura National Park",
+  "Famous for elephants and boat cruises on Periyar Lake":
+    "Periyar National Park",
+  "Highest national park in India, known for snow leopards":
+    "Hemis National Park",
+  "UNESCO World Heritage site, rich in biodiversity and rare species":
+    "Manas National Park",
+  "Has one of the highest density of Royal Bengal Tigers in India":
+    "Bandhavgarh National Park",
+  "Dense forest park famous for elephants, tigers, and birdlife":
+    "Nagarhole National Park",
+  "World-famous bird sanctuary, especially for migratory birds":
+    "Keoladeo National Park",
+  "Known for tigers, rhinos, and swamp deer in the Terai region":
+    "Dudhwa National Park",
+  "Famous for alpine flowers and rare Himalayan wildlife":
+    "Valley of Flowers National Park",
+  "Pristine tropical rainforest with high biodiversity":
+    "Silent Valley National Park",
+  "UNESCO site known for snow leopards and Himalayan ecosystems":
+    "Great Himalayan National Park",
+  "Famous for endangered wild buffalo and dense forest cover":
+    "Indravati National Park",
+  "Famous for nesting sea turtles and coastal biodiversity":
+    "Bhitarkanika National Park",
+  "Known for swamp deer and large water bodies":
+    "Kanha–Son River National Park",
+  "Known for crocodile conservation and estuarine ecosystems":
+    "Crocodile Bank and Muthupet Mangroves",
+  "Famous for Indian wolves and blackbuck": "Kuno National Park",
+  "New home for African cheetahs in India": "Kuno-Palpur National Park",
+  "Famous for red pandas and high-altitude biodiversity":
+    "Singalila National Park",
+  "Known for high-altitude wetlands and rare birds":
+    "Tso Moriri Wetland Conservation Reserve",
+  "Home to wild water buffalo and riverine grasslands":
+    "Udanti-Sitanadi National Park",
+  "Known for Himalayan black bears and dense oak forests":
+    "Dachigam National Park",
+  "Famous for leopards and dry deciduous forest": "Sariska National Park",
+  "Known for spotted deer and tropical dry forests": "Van Vihar National Park",
+  "Desert ecosystem with endangered species like the Great Indian Bustard":
+    "Desert National Park",
+  "High-altitude national park famous for musk deer and alpine meadows":
+    "Nanda Devi National Park",
+};
+
+const nationalReservesstate = {
+  "Bandipur Tiger Reserve": "Karnataka",
+  "Bandhavgarh Tiger Reserve": "Madhya Pradesh",
+  "Nagarjunsagar-Srisailam Tiger Reserve": "Andhra Pradesh & Telangana",
+  "Sariska Tiger Reserve": "Rajasthan",
+  "Ranthambore Tiger Reserve": "Rajasthan",
+  "Kaziranga Tiger Reserve": "Assam",
+  "Hemis National Park": "Ladakh",
+  "Kanha Tiger Reserve": "Madhya Pradesh",
+  "Indian Wild Ass Sanctuary (Little Rann of Kutch)": "Gujarat",
+  "Keibul Lamjao National Park": "Manipur",
+  "Buxa Tiger Reserve": "West Bengal",
+  "Sundarbans Tiger Reserve": "West Bengal",
+  "Nilgiri Biosphere Reserve": "Tamil Nadu, Kerala, Karnataka",
+  "Gir Conservation Reserve": "Gujarat",
+  "Chilika Wildlife Reserve (Nalabana Bird Sanctuary)": "Odisha",
+  "Pench Tiger Reserve": "Madhya Pradesh & Maharashtra",
+  "Tadoba-Andhari Tiger Reserve": "Maharashtra",
+  "Kuno National Park and Wildlife Reserve": "Madhya Pradesh",
+  "Dudhwa Tiger Reserve": "Uttar Pradesh",
+  "Nauradehi Wildlife Sanctuary": "Madhya Pradesh",
+};
+
+const nationalreservesfamousfor = {
+  "Famous for Bengal Tigers and the first Tiger Reserve under Project Tiger":
+    "Bandipur Tiger Reserve",
+  "Known for high tiger density and scenic landscapes":
+    "Bandhavgarh Tiger Reserve",
+  "Largest tiger reserve in India by area, known for dry deciduous forests":
+    "Nagarjunsagar-Srisailam Tiger Reserve",
+  "Home to tigers, leopards, and rich biodiversity in the Aravalli hills":
+    "Sariska Tiger Reserve",
+  "Renowned for tigers, sloth bears, and rocky terrain":
+    "Ranthambore Tiger Reserve",
+  "Known for one-horned rhinoceros and swampy grasslands":
+    "Kaziranga Tiger Reserve",
+  "Highest altitude reserve with snow leopards and Tibetan species":
+    "Hemis High Altitude Wildlife Reserve",
+  "One of the most successful reserves for tiger conservation":
+    "Kanha Tiger Reserve",
+  "Habitat for endangered Indian Wild Ass":
+    "Indian Wild Ass Sanctuary (Little Rann of Kutch)",
+  "Known for migratory birds and freshwater wetlands":
+    "Keibul Lamjao National Park (floating park on Loktak Lake)",
+  "Home to elephants, gaurs, and tropical moist deciduous forests":
+    "Buxa Tiger Reserve",
+  "Known for its Royal Bengal tigers and estuarine mangrove ecosystem":
+    "Sundarbans Tiger Reserve",
+  "First biosphere reserve in India, rich in flora and fauna":
+    "Nilgiri Biosphere Reserve",
+  "Known for Asiatic lions and dry deciduous forests":
+    "Gir Conservation Reserve",
+  "Famous for bird migration and marsh ecosystem":
+    "Chilika Wildlife Reserve (Nalabana Bird Sanctuary)",
+  "Important corridor for tigers and elephants": "Pench Tiger Reserve",
+  "Diverse landscapes and home to Bengal Tigers and leopards":
+    "Tadoba-Andhari Tiger Reserve",
+  "New habitat for African cheetahs reintroduced in India":
+    "Kuno National Park and Wildlife Reserve",
+  "Famous for swamp deer and tiger conservation": "Dudhwa Tiger Reserve",
+  "Important reserve for Indian wolves and grassland conservation":
+    "Nauradehi Wildlife Sanctuary",
+};
+
+const lakesandtheirstates = {
+  "Pangong Lake": "Ladakh",
+  "Wular Lake": "Jammu and Kashmir",
+  "Loktak Lake": "Manipur",
+  "Nakki Lake": "Rajasthan",
+  "Chilika Lake": "Odisha",
+  "Dal Lake": "Jammu and Kashmir",
+  "Sasthamkotta Lake": "Kerala",
+  "Sambhar Salt Lake": "Rajasthan",
+  "Pushkar Lake": "Rajasthan",
+  "Ashtamudi Lake": "Kerala",
+  "Hussain Sagar Lake": "Telangana",
+  "Pichola Lake": "Rajasthan",
+  "Pulicat Lake": "Andhra Pradesh & Tamil Nadu",
+  "Bhojtal (Upper Lake)": "Madhya Pradesh",
+  "Tsomgo (Changu) Lake": "Sikkim",
+  "Kanwar Lake": "Bihar",
+  "Gurudongmar Lake": "Sikkim",
+  "Vembanad Lake": "Kerala",
+  "Bellandur Lake": "Karnataka",
+  "Rabindra Sarobar": "West Bengal",
+  "Rudrasagar Lake": "Tripura",
+  "Lonar Lake": "Maharashtra",
+  "Kolleru Lake": "Andhra Pradesh",
+  "Ulsoor Lake": "Karnataka",
+  "Nainital Lake": "Uttarakhand",
+  "Surinsar Lake": "Jammu and Kashmir",
+  "Roopkund Lake": "Uttarakhand",
+  "Damodar Kund": "Gujarat",
+};
+
+const articlepoints = {
+  "Definition of State": "Article 12",
+  "Right to Equality": "Article 14",
+  "Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth":
+    "Article 15",
+  "Equality of opportunity in public employment": "Article 16",
+  "Abolition of Untouchability": "Article 17",
+  "Abolition of titles": "Article 18",
+  "Freedom of speech and expression": "Article 19",
+  "Protection in respect of conviction for offences": "Article 20",
+  "Protection of life and personal liberty": "Article 21",
+  "Right to education": "Article 21A",
+  "Protection against arrest and detention": "Article 22",
+  "Prohibition of human trafficking and forced labour": "Article 23",
+  "Prohibition of child labour": "Article 24",
+  "Freedom of religion": "Article 25",
+  "Freedom to manage religious affairs": "Article 26",
+  "Protection of interests of minorities": "Article 29",
+  "Right of minorities to establish and administer educational institutions":
+    "Article 30",
+  "Right to constitutional remedies": "Article 32",
+  "Equal pay for equal work (DPSP)": "Article 39",
+  "Organisation of Village Panchayats": "Article 40",
+  "Uniform Civil Code for the citizens": "Article 44",
+  "Promotion of international peace and security": "Article 51",
+  "Power of the President to grant pardon": "Article 72",
+  "Extent of executive power of the Union": "Article 73",
+  "Council of Ministers to aid and advise the President": "Article 74",
+  "Attorney General of India": "Article 76",
+  "Duties of Prime Minister to President": "Article 78",
+  "Definition of Money Bill": "Article 110",
+  "Annual Financial Statement (Union Budget)": "Article 112",
+  "Power of President to promulgate Ordinances": "Article 123",
+  "Establishment and constitution of Supreme Court": "Article 124",
+  "Comptroller and Auditor General of India": "Article 148",
+  "Appointment of Governor": "Article 155",
+  "Power of Governor to grant pardons": "Article 161",
+  "Extent of executive power of the State": "Article 162",
+  "Council of Ministers to aid and advise Governor": "Article 163",
+  "Advocate General for the State": "Article 165",
+  "Constitution of State Legislatures": "Article 168",
+  "Power of High Courts to issue certain writs": "Article 226",
+  "Finance Commission": "Article 280",
+  "Right to property": "Article 300A",
+  "All-India Services": "Article 312",
+  "Election Commission of India": "Article 324",
+  "Reservation of seats for SCs and STs in Lok Sabha": "Article 330",
+  "National Commission for SCs": "Article 338",
+  "Backward Classes Commission": "Article 340",
+  "President’s Rule (State Emergency)": "Article 356",
+  "Financial Emergency": "Article 360",
+  "Special status to Jammu and Kashmir (abrogated in 2019)": "Article 370",
+  "Special provisions for other states": "Article 371",
+  "Procedure of Constitutional Amendment": "Article 368",
+  "Directive Principles of State Policy (DPSP) Introduction": "Article 36",
+  "Fundamental Duties": "Article 51A",
+  "Official Language of the Republic of India": "Article 343",
+  "Oath or affirmation by the President": "Article 60",
+  "Oath or affirmation by Judges of Supreme Court": "Article 124(6)",
+  "Oath or affirmation by Judges of High Court": "Article 219",
+  "Emergency Provisions (Intro)": "Article 352",
+  "Martial Law provision": "Article 34",
+  "Inter-State Council": "Article 263",
+  Tribunals: "Article 323A & 323B",
+  Panchayats: "Article 243 to 243O",
+  Municipalities: "Article 243P to 243ZG",
+  "Co-operative societies": "Article 243ZH to 243ZT",
+  "Amendment of the Constitution": "Article 368",
+  "Languages in Eighth Schedule": "Article 344 and 351",
+  "Public Service Commissions (Union and State)": "Article 315 to 323",
+  "National Emergency": "Article 352",
+  "State Emergency": "Article 356",
+  "Financial Emergency": "Article 360",
+};
+
+const importantDays = {
+  "World Music Day": "June 21",
+  "World Ozone Day": "September 16",
+  "International Day of Peace": "September 21",
+  "Earth Day": "April 22",
+  "Doctor's Day (India)": "July 1",
+  "Hindi Diwas": "September 14",
+  "Children’s Day (India)": "November 14",
+  "World Population Day": "July 11",
+  "International Yoga Day": "June 21",
+  "International Women's Day": "March 8",
+  "Republic Day": "January 26",
+  "Shaheed Diwas (Bhagat Singh)": "March 23",
+  "World Health Day": "April 7",
+  "World Telecommunication Day": "May 17",
+  "National Epilepsy Day": "November 17",
+  "Labour Day / May Day": "May 1",
+  "World AIDS Day": "December 1",
+  "International Mother Language Day": "February 21",
+  "World Food Day": "October 16",
+  "National Energy Conservation Day": "December 14",
+  "Quit India Day": "August 8",
+  "Ambedkar Jayanti": "April 14",
+  "World Water Day": "March 22",
+  "Indian Navy Day": "December 4",
+  "World Mental Health Day": "October 10",
+  "Constitution Day (India)": "November 26",
+  "National Productivity Day": "February 12",
+  "World Consumer Rights Day": "March 15",
+  "World Environment Day": "June 5",
+  "Valentine's Day": "February 14",
+  "National Technology Day": "May 11",
+  "World Cancer Day": "February 4",
+  "World Wildlife Day": "March 3",
+  "Gandhi Jayanti": "October 2",
+  "National Science Day": "February 28",
+  "World Animal Day": "October 4",
+  "Human Rights Day": "December 10",
+  "Indian Air Force Day": "October 8",
+  "Martyrs' Day": "January 30",
+  "Friendship Day (1st Sunday of August)": "Varies",
+  "National Maritime Day": "April 5",
+  "World Tourism Day": "September 27",
+  "Engineer’s Day": "September 15",
+  "United Nations Day": "October 24",
+  "World Press Freedom Day": "May 3",
+  "Jallianwala Bagh Massacre Day": "April 13",
+  "Teacher’s Day": "September 5",
+  "Kargil Vijay Diwas": "July 26",
+  "National Unity Day (Sardar Patel Jayanti)": "October 31",
+  "World Vegan Day": "November 1",
+  "Father's Day (3rd Sunday of June)": "Varies",
+  "International Nurses Day": "May 12",
+  "Anti-Terrorism Day": "May 21",
+  "International Day for Biological Diversity": "May 22",
+  "World Humanitarian Day": "August 19",
+  "Independence Day (India)": "August 15",
+};
+
 export const metadata = {
   statecapitalindia: {
     data: statecapitalindia,
-    qline: "What is the capital of ____?",
+    qline: "What is the capital of '____'?",
     title: "Capital of states of India",
   },
   indianDams: {
     data: indianDams,
-    qline: "____ is located in which state?",
+    qline: "'____' is located in which state?",
     title: "Dams and their locations",
   },
   indianDamsrivernames: {
     data: indianDamsrivernames,
-    qline: "____ is constructed on which river?",
+    qline: "'____' is constructed on which river?",
     title: "Dams and their rivers",
   },
   classicalDances: {
     data: classicalDances,
-    qline: "____ is danced in which state?",
+    qline: "'____' is classic dance of which state?",
     title: "Classical dances of India",
   },
   folkDances: {
     data: folkDances,
-    qline: "____ is danced in which state?",
+    qline: "'____' is folk dance of which state?",
     title: "Folk dances of India",
   },
   traditionalDances: {
     data: traditionalDances,
-    qline: "____ is danced in which state?",
+    qline: "'____' is traditional dance of which state?",
     title: "Traditional dances of India",
   },
   famousIndianBooksandauthors: {
     data: famousIndianBooksandauthors,
-    qline: "who is the author of ____?",
+    qline: "who is the author of '____'?",
     title: "Famous Indian books and authors",
   },
   classicalDancers: {
     data: classicalDancers,
-    qline: "____ is a famous dancer of which classical dance?",
+    qline: "'____' is a famous dancer of which classical dance?",
     title: "Classical dancers of India",
+  },
+  nationalParksstates: {
+    data: nationalParksstates,
+    qline: "'____' is located in which state?",
+    title: "National Parks and their states",
+  },
+  nationalparkfamousfor: {
+    data: nationalparkfamousfor,
+    qline: "'____'",
+    title: "National Parks and their famous features",
+  },
+  nationalReservesstate: {
+    data: nationalReservesstate,
+    qline: "'____' is located in which state?",
+    title: "National Reserves and their states",
+  },
+  nationalreservesfamousfor: {
+    data: nationalreservesfamousfor,
+    qline: "'____'",
+    title: "National Reserves and their famous features",
+  },
+  lakesandtheirstates: {
+    data: lakesandtheirstates,
+    qline: "'____' is located in which state?",
+    title: "Lakes and their states",
+  },
+  articlepoints: {
+    data: articlepoints,
+    qline: "'____' is mentioned in which article?",
+    title: "Important Articles of the Constitution of India",
+  },
+  importantDays: {
+    data: importantDays,
+    qline: "'____' is on which day?",
+    title: "Important days",
   },
 };
 export const metadatafn = (name) => {
