@@ -11,6 +11,9 @@ async function page({ params }) {
 
   return (
     <div>
+      <h1 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white mt-10">
+        {data?.title}
+      </h1>
       <Clientcomp
         data={data?.data}
         qline={data?.qline}
@@ -30,7 +33,9 @@ async function page({ params }) {
           </Link>
         ))}
       </div>
-      <p className="mt-10 text-center">Please note the info provided could be outdated.</p>
+      <p className="mt-10 text-center">
+        Please note the info provided could be outdated.
+      </p>
     </div>
   );
 }
