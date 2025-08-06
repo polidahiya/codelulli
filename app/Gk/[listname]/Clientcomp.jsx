@@ -4,13 +4,13 @@ import Learn from "./Learn";
 import Read from "./Read";
 import Test from "./Test";
 
-function Clientcomp({ data, qline, title }) {
+function Clientcomp({ data, qline, title, listname }) {
   const Optionlist = [
     {
       title: "Read",
       comp: <Read data={data} Title={title} />,
     },
-    { title: "Learn", comp: <Learn data={data} qline={qline} /> },
+    { title: "Learn", comp: <Learn data={data} qline={qline} listname={listname}/> },
     { title: "Test", comp: <Test data={data} qline={qline} /> },
   ];
   const [mode, setMode] = useState(0);

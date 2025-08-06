@@ -11,7 +11,12 @@ async function page({ params }) {
 
   return (
     <div>
-      <Clientcomp data={data?.data} qline={data?.qline} title={data?.title} />
+      <Clientcomp
+        data={data?.data}
+        qline={data?.qline}
+        title={data?.title}
+        listname={listname}
+      />
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
         {Object.entries(metadata).map(([key, value]) => (
           <Link
@@ -19,7 +24,7 @@ async function page({ params }) {
             key={key}
             className="block p-4 bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-all"
           >
-            <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100">
+            <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100 text-center">
               {value?.title}
             </h3>
           </Link>

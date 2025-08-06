@@ -11,8 +11,8 @@ function shuffleArray(array) {
   return array;
 }
 
-export default function Learn({ data, qline }) {
-  const repeatlimit = 2;
+export default function Learn({ data, qline, listname }) {
+  const repeatlimit = 4;
   const autonexttime = 1000;
   const quelist = Object.keys(data);
   const Anslist = Object.values(data);
@@ -22,6 +22,18 @@ export default function Learn({ data, qline }) {
   const [selectedoption, setselectedoption] = useState(null);
   const [previousque, setpreviousque] = useState(false);
   const [currentindex, setcurrentindex] = useState(0);
+
+  // Load progress from localStorage
+  useEffect(() => {
+    const savedProgress = localStorage.getItem(listname);
+    if (savedProgress) {
+      const parsed = JSON.parse(savedProgress);
+      console.log(parsed);
+
+      setquestionnumber(parsed.questionnumber || 0);
+      setcurrentindex(parsed.currentindex || 0);
+    }
+  }, []);
 
   const suffleoptions = (index) => {
     const correctoption = Anslist[index];
@@ -43,7 +55,9 @@ export default function Learn({ data, qline }) {
       setquestionnumber((pre) => (quelist[pre + 1] ? pre + 1 : pre));
       setrepeattimes(0);
     } else {
-      if (!previousque) setrepeattimes(repeattimes + 1);
+      if (questionnumber === 0 || !previousque) {
+        setrepeattimes(repeattimes + 1);
+      }
     }
 
     if (previousque) {
@@ -56,6 +70,21 @@ export default function Learn({ data, qline }) {
       suffleoptions(questionnumber);
       setpreviousque(true);
     }
+    localStorage.setItem(
+      listname,
+      JSON.stringify({ questionnumber, currentindex })
+    );
+  };
+
+  // Restart handler
+  const restart = () => {
+    setquestionnumber(0);
+    setcurrentindex(0);
+    setrepeattimes(0);
+    setselectedoption(null);
+    setpreviousque(false);
+    suffleoptions(0);
+    localStorage.removeItem(listname);
   };
 
   return (
@@ -93,6 +122,12 @@ export default function Learn({ data, qline }) {
             </button>
           ))}
         </div>
+        <button
+          className="mt-6 w-full py-2 px-4 rounded-xl border bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+          onClick={restart}
+        >
+          Restart
+        </button>
       </div>
       <Ads type={2} />
     </div>
